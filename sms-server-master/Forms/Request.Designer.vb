@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Request
-    Inherits MetroFramework.Forms.MetroForm
+    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -49,9 +49,9 @@ Partial Class Request
         Me.Panel1.Controls.Add(Me.lblInfo)
         Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 30)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(578, 494)
+        Me.Panel1.Size = New System.Drawing.Size(578, 489)
         Me.Panel1.TabIndex = 0
         '
         'lvRequestedKeys
@@ -177,20 +177,14 @@ Partial Class Request
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnDeny
-        Me.ClientSize = New System.Drawing.Size(578, 524)
+        Me.ClientSize = New System.Drawing.Size(578, 489)
         Me.Controls.Add(Me.Panel1)
-        Me.DisplayHeader = False
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Movable = False
         Me.Name = "Request"
-        Me.Padding = New System.Windows.Forms.Padding(0, 30, 0, 0)
-        Me.Resizable = False
-        Me.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Style = MetroFramework.MetroColorStyle.Green
         Me.Text = "Request"
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

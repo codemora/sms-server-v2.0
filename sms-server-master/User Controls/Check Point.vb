@@ -1,23 +1,24 @@
 ﻿Public Class Check_Point
-
+    Public selected_request As Requestlog
+    Public selected_item As ListViewItem
     Public full_reload As Boolean = True
     Public Sub Check_Point_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tmRefresh.Start()
     End Sub
 
     '
-    'Fills listView2 with staff data List
+    'Fills lvData with staff data List
     '
     Private Sub fillListView(data As List(Of Requestlog))
         Dim items As New List(Of ListViewItem)
-        For Each itm In data
+        For Each request In data
             Dim item As New ListViewItem
             With item
-                .Text = itm.getId
-                .SubItems.Add(getStaffById(itm.getStaffId).getLastName + " " + getStaffById(itm.getStaffId).getOtherNames)
-                .SubItems.Add(getAllrequestlogKeysString(itm.getId))
-                .SubItems.Add(itm.getAction)
-                .SubItems.Add(itm.getCreatedAt)
+                .Text = request.getId
+                .SubItems.Add(getStaffByRef(request.getStaffRef).getFullname)
+                .SubItems.Add(request.getKeys)
+                .SubItems.Add(request.getAction)
+                .SubItems.Add(request.getCreatedAt)
             End With
             items.Add(item)
         Next
@@ -31,7 +32,7 @@
         If getAllRequestlogByStatus("pending").Count = 0 Then
             lvData.Items.Clear()
             lvData.GridLines = False
-            lblCount.Text = numberOfDisplayedRecords(lvData.Items.Count, getAllRequestlogByStatus("pending").Count)
+            lblCount.Text = numberOfDisplayedRecords(lvData)
             Dashboard.showNoRecordDisplay()
         Else
             If Dashboard.no_record_found Then Dashboard.hideNoRecordDisplay()
@@ -43,7 +44,7 @@
                 fillListView(getAllRequestlogByStatus("pending", lvData.Items.Count))
             End If
             lvData.GridLines = True
-            lblCount.Text = numberOfDisplayedRecords(lvData.Items.Count, getAllRequestlogByStatus("pending").Count)
+            lblCount.Text = numberOfDisplayedRecords(lvData)
         End If
         Dashboard.hideLoader()
 
@@ -69,6 +70,14 @@
             tmRefresh.Stop()
             Dashboard.hideLoader()
             Dashboard.hideNoRecordDisplay()
+        End If
+    End Sub
+
+    Private Sub lvData_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvData.SelectedIndexChanged
+
+        If lvData.SelectedItems.Count > 0 Then
+            selected_item = lvData.SelectedItems.Item(0)  'gets selected ListView item
+            selected_request = getRequestlog(CInt(selected_item.Text))
         End If
     End Sub
 End Class

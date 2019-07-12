@@ -1,8 +1,7 @@
 ﻿Public Class User
 
     Private id As Integer
-    Private last_name As String
-    Private other_names As String
+    Private fullname As String
     Private username As String
     Private password As String
     Private privilege As String
@@ -15,7 +14,7 @@
     Private created_at As DateTime
     Private updated_at As DateTime
 
-    Public Sub New(id As String, last_name As String, other_names As String, privilege As String, username As String, password As String, phone As String, security_question As String, security_answer As String, image As Byte(), is_active As Boolean, deleted_at As DateTime, created_at As DateTime, updated_at As DateTime)
+    Public Sub New(id As String, fullname As String, privilege As String, username As String, password As String, phone As String, security_question As String, security_answer As String, image As Byte(), is_active As Boolean, deleted_at As DateTime, created_at As DateTime, updated_at As DateTime)
 
         Me.id = id
         Me.username = username.Trim
@@ -24,13 +23,12 @@
         Me.created_at = created_at
         Me.updated_at = updated_at
         Me.phone = phone.Trim
-        Me.last_name = last_name.Trim
+        Me.fullname = fullname.Trim
         Me.image = image
         Me.security_answer = security_answer
         Me.security_question = security_question
         Me.is_active = is_active
         Me.deleted_at = deleted_at
-        Me.other_names = other_names
 
     End Sub
 
@@ -47,12 +45,10 @@
     Public Function getPrivilege() As String
         Return Me.privilege
     End Function
-    Public Function getLastName() As String
-        Return Me.last_name
+    Public Function getFullname() As String
+        Return Me.fullname
     End Function
-    Public Function getOtherNames() As String
-        Return Me.other_names
-    End Function
+
     Public Function getPhone() As String
         Return Me.phone
     End Function

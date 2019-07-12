@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FA7BA92-7D90-464B-A9DE-9337E237C892}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>sms_server_master.My.MyApplication</StartupObject>
+    <RootNamespace>sms_server_master</RootNamespace>
+    <AssemblyName>sms-server-master</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>sms-server-master.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>sms-server-master.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>D:\Tools\packages\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>D:\Tools\packages\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>D:\Tools\packages\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Resources" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\sms.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sms.vb">
+      <DependentUpon>sms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Key.vb" />
+    <Compile Include="Entities\KeyRequestlog.vb" />
+    <Compile Include="Entities\KeyStaff.vb" />
+    <Compile Include="Entities\Requestlog.vb" />
+    <Compile Include="Entities\Staff.vb" />
+    <Compile Include="Entities\User.vb" />
+    <Compile Include="Forms\Add User.Designer.vb">
+      <DependentUpon>Add User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Create Password.Designer.vb">
+      <DependentUpon>Create Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Create Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Log In.Designer.vb">
+      <DependentUpon>Log In.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Log In.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Module1.vb" />
+    <Compile Include="User Controls\NoRecordControl.Designer.vb">
+      <DependentUpon>NoRecordControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\NoRecordControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Request.Designer.vb">
+      <DependentUpon>Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash Screen.Designer.vb">
+      <DependentUpon>Splash Screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Splash Screen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View Staff.Designer.vb">
+      <DependentUpon>View Staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View Staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\functions.vb" />
+    <Compile Include="Functions\KeyRequestlogFunctions.vb" />
+    <Compile Include="Functions\KeysFunctions.vb" />
+    <Compile Include="Functions\KeyStaffFunctions.vb" />
+    <Compile Include="Functions\RequestlogFunctions.vb" />
+    <Compile Include="Functions\StaffFunctions.vb" />
+    <Compile Include="Functions\UserFunctions.vb" />
+    <Compile Include="Functions\ValidationFunction.vb" />
+    <Compile Include="Functions\ValidationModule.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Check Point.Designer.vb">
+      <DependentUpon>Check Point.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Check Point.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\KeysControl.Designer.vb">
+      <DependentUpon>KeysControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\KeysControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\LogsControl.Designer.vb">
+      <DependentUpon>LogsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LogsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="User Controls\LoaderControl.Designer.vb">
+      <DependentUpon>LoaderControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LoaderControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StaffControl.Designer.vb">
+      <DependentUpon>StaffControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StaffControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UsersControl.Designer.vb">
+      <DependentUpon>UsersControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UsersControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Add User.resx">
+      <DependentUpon>Add User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Create Password.resx">
+      <DependentUpon>Create Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Log In.resx">
+      <DependentUpon>Log In.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\NoRecordControl.resx">
+      <DependentUpon>NoRecordControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request.resx">
+      <DependentUpon>Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash Screen.resx">
+      <DependentUpon>Splash Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View Staff.resx">
+      <DependentUpon>View Staff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Check Point.resx">
+      <DependentUpon>Check Point.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\KeysControl.resx">
+      <DependentUpon>KeysControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\LogsControl.resx">
+      <DependentUpon>LogsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\LoaderControl.resx">
+      <DependentUpon>LoaderControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StaffControl.resx">
+      <DependentUpon>StaffControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UsersControl.resx">
+      <DependentUpon>UsersControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\sms.xsc">
+      <DependentUpon>sms.xsd</DependentUpon>
+    </None>
+    <None Include="Database\sms.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sms.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\sms.xss">
+      <DependentUpon>sms.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-key-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010-files-and-folders-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\014-policeman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-power-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010-add-user-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020-locked-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016-padlock-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\027-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\021-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\035-add-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-eye1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-11.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

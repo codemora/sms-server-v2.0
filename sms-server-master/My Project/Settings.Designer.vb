@@ -54,15 +54,16 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-FPDPBMQ\SQLEXPRESS;Initial Catalog=smsdb;Integrated Security="& _ 
-            "True")>  _
-        Public ReadOnly Property SMSConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SMSConnectionString() As String
             Get
                 Return CType(Me("SMSConnectionString"),String)
             End Get
+            Set
+                Me("SMSConnectionString") = value
+            End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _

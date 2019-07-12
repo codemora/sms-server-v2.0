@@ -22,197 +22,217 @@ Partial Class View_Staff
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.listkeys = New System.Windows.Forms.ListBox()
-        Me.lblDept = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.lblDepartment = New System.Windows.Forms.Label()
+        Me.lblPosition = New System.Windows.Forms.Label()
+        Me.lboxKeysAccessible = New System.Windows.Forms.ListBox()
+        Me.lblActive = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblContact = New System.Windows.Forms.Label()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.lblRef = New System.Windows.Forms.Label()
+        Me.lblFullname = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnEdit
+        'Panel1
         '
-        Me.btnEdit.BackColor = System.Drawing.Color.Transparent
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(302, 423)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(85, 34)
-        Me.btnEdit.TabIndex = 105
-        Me.btnEdit.Text = "Edit"
-        Me.btnEdit.UseVisualStyleBackColor = False
-        '
-        'lblName
-        '
-        Me.lblName.AutoEllipsis = True
-        Me.lblName.AutoSize = True
-        Me.TableLayoutPanel1.SetColumnSpan(Me.lblName, 2)
-        Me.lblName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblName.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.Color.White
-        Me.lblName.Location = New System.Drawing.Point(3, 0)
-        Me.lblName.MaximumSize = New System.Drawing.Size(330, 50)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(312, 30)
-        Me.lblName.TabIndex = 114
-        Me.lblName.Text = "Emmanuel Eugene Ofori"
-        Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'listkeys
-        '
-        Me.listkeys.FormattingEnabled = True
-        Me.listkeys.Location = New System.Drawing.Point(355, 35)
-        Me.listkeys.Name = "listkeys"
-        Me.listkeys.Size = New System.Drawing.Size(197, 160)
-        Me.listkeys.TabIndex = 113
-        '
-        'lblDept
-        '
-        Me.lblDept.AutoSize = True
-        Me.lblDept.BackColor = System.Drawing.Color.Transparent
-        Me.lblDept.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDept.ForeColor = System.Drawing.Color.White
-        Me.lblDept.Location = New System.Drawing.Point(352, 208)
-        Me.lblDept.MaximumSize = New System.Drawing.Size(200, 84)
-        Me.lblDept.MinimumSize = New System.Drawing.Size(200, 0)
-        Me.lblDept.Name = "lblDept"
-        Me.lblDept.Size = New System.Drawing.Size(200, 18)
-        Me.lblDept.TabIndex = 109
-        Me.lblDept.Text = "Dept: Computer Science"
-        Me.lblDept.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(354, 15)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(87, 13)
-        Me.Label10.TabIndex = 106
-        Me.Label10.Text = "Keys Accessible "
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(52, 35)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(167, 160)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 115
-        Me.PictureBox2.TabStop = False
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblName, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(185, 257)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(318, 100)
-        Me.TableLayoutPanel1.TabIndex = 117
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(3, 30)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 18)
-        Me.Label2.TabIndex = 115
-        Me.Label2.Text = "ID PJ24"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.lblDepartment)
+        Me.Panel1.Controls.Add(Me.lblPosition)
+        Me.Panel1.Controls.Add(Me.lboxKeysAccessible)
+        Me.Panel1.Controls.Add(Me.lblActive)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.lblContact)
+        Me.Panel1.Controls.Add(Me.lblGender)
+        Me.Panel1.Controls.Add(Me.lblRef)
+        Me.Panel1.Controls.Add(Me.lblFullname)
+        Me.Panel1.Location = New System.Drawing.Point(21, 52)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(576, 467)
+        Me.Panel1.TabIndex = 95
         '
         'Label3
         '
+        Me.Label3.AutoEllipsis = True
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(107, 30)
+        Me.Label3.Location = New System.Drawing.Point(11, 211)
+        Me.Label3.MaximumSize = New System.Drawing.Size(400, 28)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 18)
-        Me.Label3.TabIndex = 116
-        Me.Label3.Text = "0573235605"
+        Me.Label3.Size = New System.Drawing.Size(131, 19)
+        Me.Label3.TabIndex = 120
+        Me.Label3.Text = "Keys Accessible"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'lblDepartment
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(107, 48)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 18)
-        Me.Label4.TabIndex = 117
-        Me.Label4.Text = "0573235605"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblDepartment.AutoEllipsis = True
+        Me.lblDepartment.AutoSize = True
+        Me.lblDepartment.BackColor = System.Drawing.Color.Transparent
+        Me.lblDepartment.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDepartment.ForeColor = System.Drawing.Color.Silver
+        Me.lblDepartment.Location = New System.Drawing.Point(9, 164)
+        Me.lblDepartment.MaximumSize = New System.Drawing.Size(540, 21)
+        Me.lblDepartment.Name = "lblDepartment"
+        Me.lblDepartment.Size = New System.Drawing.Size(243, 21)
+        Me.lblDepartment.TabIndex = 119
+        Me.lblDepartment.Text = "Department: Security Services"
+        Me.lblDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'lblPosition
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(3, 48)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 18)
-        Me.Label5.TabIndex = 118
-        Me.Label5.Text = "0573235605"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblPosition.AutoEllipsis = True
+        Me.lblPosition.AutoSize = True
+        Me.lblPosition.BackColor = System.Drawing.Color.Transparent
+        Me.lblPosition.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPosition.ForeColor = System.Drawing.Color.Silver
+        Me.lblPosition.Location = New System.Drawing.Point(9, 188)
+        Me.lblPosition.MaximumSize = New System.Drawing.Size(540, 21)
+        Me.lblPosition.Name = "lblPosition"
+        Me.lblPosition.Size = New System.Drawing.Size(203, 21)
+        Me.lblPosition.TabIndex = 118
+        Me.lblPosition.Text = "Position: National Service"
+        Me.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lboxKeysAccessible
+        '
+        Me.lboxKeysAccessible.BackColor = System.Drawing.Color.SeaGreen
+        Me.lboxKeysAccessible.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lboxKeysAccessible.ForeColor = System.Drawing.Color.White
+        Me.lboxKeysAccessible.FormattingEnabled = True
+        Me.lboxKeysAccessible.ItemHeight = 21
+        Me.lboxKeysAccessible.Location = New System.Drawing.Point(13, 232)
+        Me.lboxKeysAccessible.Name = "lboxKeysAccessible"
+        Me.lboxKeysAccessible.Size = New System.Drawing.Size(541, 214)
+        Me.lboxKeysAccessible.TabIndex = 117
+        '
+        'lblActive
+        '
+        Me.lblActive.AutoSize = True
+        Me.lblActive.BackColor = System.Drawing.Color.Red
+        Me.lblActive.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblActive.ForeColor = System.Drawing.Color.White
+        Me.lblActive.Location = New System.Drawing.Point(160, 136)
+        Me.lblActive.Name = "lblActive"
+        Me.lblActive.Size = New System.Drawing.Size(112, 21)
+        Me.lblActive.TabIndex = 116
+        Me.lblActive.Text = "Deactivated"
+        Me.lblActive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.sms_server_master.My.Resources.Resources.Profile_Image
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 20)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(135, 137)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 115
+        Me.PictureBox1.TabStop = False
+        '
+        'lblContact
+        '
+        Me.lblContact.AutoEllipsis = True
+        Me.lblContact.AutoSize = True
+        Me.lblContact.BackColor = System.Drawing.Color.Transparent
+        Me.lblContact.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContact.ForeColor = System.Drawing.Color.Silver
+        Me.lblContact.Location = New System.Drawing.Point(160, 110)
+        Me.lblContact.MaximumSize = New System.Drawing.Size(400, 21)
+        Me.lblContact.Name = "lblContact"
+        Me.lblContact.Size = New System.Drawing.Size(376, 21)
+        Me.lblContact.TabIndex = 107
+        Me.lblContact.Text = "0573235605 | emmanuel.ofori.stu@uenr.edu.gh"
+        Me.lblContact.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblGender
+        '
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGender.ForeColor = System.Drawing.Color.Silver
+        Me.lblGender.Location = New System.Drawing.Point(160, 84)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(49, 21)
+        Me.lblGender.TabIndex = 106
+        Me.lblGender.Text = "Male"
+        Me.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblRef
+        '
+        Me.lblRef.AutoSize = True
+        Me.lblRef.BackColor = System.Drawing.Color.Transparent
+        Me.lblRef.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRef.ForeColor = System.Drawing.Color.Silver
+        Me.lblRef.Location = New System.Drawing.Point(160, 58)
+        Me.lblRef.Name = "lblRef"
+        Me.lblRef.Size = New System.Drawing.Size(59, 21)
+        Me.lblRef.TabIndex = 104
+        Me.lblRef.Text = "@PJ45"
+        Me.lblRef.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFullname
+        '
+        Me.lblFullname.AutoEllipsis = True
+        Me.lblFullname.AutoSize = True
+        Me.lblFullname.BackColor = System.Drawing.Color.Transparent
+        Me.lblFullname.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFullname.ForeColor = System.Drawing.Color.White
+        Me.lblFullname.Location = New System.Drawing.Point(160, 25)
+        Me.lblFullname.MaximumSize = New System.Drawing.Size(400, 28)
+        Me.lblFullname.Name = "lblFullname"
+        Me.lblFullname.Size = New System.Drawing.Size(118, 28)
+        Me.lblFullname.TabIndex = 102
+        Me.lblFullname.Text = "Fullname"
+        Me.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(190, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(238, 32)
+        Me.Label7.TabIndex = 94
+        Me.Label7.Text = "VIEW STAFF DETAILS"
         '
         'View_Staff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DimGray
-        Me.ClientSize = New System.Drawing.Size(673, 508)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.btnEdit)
-        Me.Controls.Add(Me.listkeys)
-        Me.Controls.Add(Me.lblDept)
-        Me.Controls.Add(Me.Label10)
+        Me.BackColor = System.Drawing.Color.SeaGreen
+        Me.ClientSize = New System.Drawing.Size(619, 531)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label7)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "View_Staff"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "View Staff"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnEdit As Button
-    Friend WithEvents lblName As Label
-    Friend WithEvents listkeys As ListBox
-    Friend WithEvents lblDept As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblActive As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblContact As Label
+    Friend WithEvents lblGender As Label
+    Friend WithEvents lblRef As Label
+    Friend WithEvents lblFullname As Label
+    Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblDepartment As Label
+    Friend WithEvents lblPosition As Label
+    Friend WithEvents lboxKeysAccessible As ListBox
 End Class

@@ -69,37 +69,55 @@ Module ValidationModule
     End Function
 
 
-    'Public Function ValidateUsername(errorProvider As ErrorProvider, txtbox As TextBox, message As String, searchBox As MaskedTextBox) As Boolean
+    Public Function ValidateUsername(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
 
-    '    Dim pattern As String = "^[a-zA-Z0-9_]{5,20}$"
+        Dim pattern As String = "^[a-zA-Z0-9_]{3,16}$"
 
-    '    Dim name As New Regex(pattern) 'Attach Pattern To name Textbox
+        Dim name As New Regex(pattern) 'Attach Pattern To name Textbox
 
-    '    'Not A Match
-    '    If searchBox.Focused Then
-    '        errorProvider.SetError(txtbox, "")
-    '        Return False
-    '    ElseIf txtbox.Text = "" Then
-    '        errorProvider.SetError(txtbox, "Please the field must not be empty")
-    '        Beep()
-    '        Return False
-    '    ElseIf Not name.IsMatch(txtbox.Text.Trim) Then
-    '        errorProvider.SetError(txtbox, message)
-    '        Beep()
-    '        Return False
-    '    ElseIf Form4.btnUpdate.Enabled = True And student.updateKey = Form4.txtUsername.Text.Trim Then
-    '        errorProvider.SetError(txtbox, "")
-    '        Return True
+        'Not A Match
+        If txtbox.Text.Trim = "" Then
+            errorProvider.SetError(txtbox, "Please the field must not be empty")
+            Beep()
+            Return False
+        ElseIf Not name.IsMatch(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Invalid Username! May include lower or upper case letter, digits or underscore. Must be 3 to 16 characters.")
+            Beep()
+            Return False
+        ElseIf IsExistUsername(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "This Username already exist")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
 
-    '    ElseIf user.IsExist(keyType.Id, txtbox.Text.Trim) Then
-    '        errorProvider.SetError(txtbox, "This Username already exist")
-    '        Beep()
-    '        Return False
-    '    Else
-    '        errorProvider.SetError(txtbox, "")
-    '        Return True
-    '    End If
-    'End Function
+    Public Function ValidateStaffRef(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+
+        Dim pattern As String = "^[a-zA-Z0-9_]{3,16}$"
+
+        Dim name As New Regex(pattern) 'Attach Pattern To name Textbox
+
+        'Not A Match
+        If txtbox.Text.Trim = "" Then
+            errorProvider.SetError(txtbox, "Please the field must not be empty")
+            Beep()
+            Return False
+        ElseIf Not name.IsMatch(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Invalid Staff Ref! May include lower or upper case letter, digits or underscore. Must be 3 to 16 characters.")
+            Beep()
+            Return False
+        ElseIf IsExistStaff(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Staff Ref already exist")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
 
 
     Public Function ValidateName(errorProvider As ErrorProvider, txtbox As TextBox, message As String, searchBox As MaskedTextBox) As Boolean
@@ -126,13 +144,23 @@ Module ValidationModule
         End If
     End Function
 
-
-    Public Function ValidateComboBox(errorProvider As ErrorProvider, cmbBox As ComboBox, message As String, searchBox As MaskedTextBox) As Boolean
-        If searchBox.Focused Then
-            errorProvider.SetError(cmbBox, "")
+    Public Function ValidateText(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+        If txtbox.Text = "" Then
+            errorProvider.SetError(txtbox, "Field must not be empty")
+            Beep()
             Return False
-        ElseIf cmbBox.SelectedIndex = -1 Then
-            errorProvider.SetError(cmbBox, message)
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
+
+    Public Function ValidateComboBox(errorProvider As ErrorProvider, cmbBox As ComboBox) As Boolean
+        'If searchBox.Focused Then
+        '    errorProvider.SetError(cmbBox, "")
+        '    Return False
+        If cmbBox.SelectedIndex = 0 Then
+            errorProvider.SetError(cmbBox, "Select an option")
             Beep()
             Return False
         Else
@@ -142,39 +170,30 @@ Module ValidationModule
     End Function
 
 
-    Public Function ValidateEmail(errorProvider As ErrorProvider, txtbox As TextBox, searchBox As MaskedTextBox) As Boolean
+    Public Function ValidateEmail(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
 
         'Set Up Reg Exp Pattern To Allow Most Characters, And No Special Characters
-        Dim reEmail As Regex = New Regex("([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\." + _
+        Dim reEmail As Regex = New Regex("([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\." +
         ")|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})", RegexOptions.IgnoreCase Or RegexOptions.CultureInvariant _
         Or RegexOptions.IgnorePatternWhitespace Or RegexOptions.Compiled)
 
         Dim blnPossibleMatch As Boolean = reEmail.IsMatch(txtbox.Text.Trim)
-        If searchBox.Focused Then
-            errorProvider.SetError(txtbox, "")
-            Return False
-        ElseIf IsNothing(txtbox) Then
+        If txtbox.Text.Trim = "" Then
             errorProvider.SetError(txtbox, "") 'Inform User
             Return True
-
-        ElseIf blnPossibleMatch Then
-
             'Check If Entered Email Is In Correct Format
-            If Not txtbox.Text.Equals(reEmail.Match(txtbox.Text.Trim).ToString) Then
-                errorProvider.SetError(txtbox, "Invalid Email Address!") 'Inform User
-                Return False
-            Else
-                errorProvider.SetError(txtbox, "")
-                Return True 'Email is Perfect
-            End If
-
-        Else 'Not A Match To Pattern
-
+        ElseIf Not txtbox.Text.Equals(reEmail.Match(txtbox.Text.Trim).ToString) Then
             errorProvider.SetError(txtbox, "Invalid Email Address!") 'Inform User
             Beep()
-
-            Return False 'Set Boolean Variable To False
+            Return False
+        ElseIf IsExistStaffEmail(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Email already exist")
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
         End If
+
 
     End Function
 
@@ -225,6 +244,36 @@ Module ValidationModule
         End If
     End Function
 
+    Public Function ValidateKeyTag(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+        If txtbox.Text = "" Then
+            errorProvider.SetError(txtbox, "Field should not be empty")
+            Beep()
+            Return False
+        ElseIf isExistKey(txtbox.text) Then
+            errorProvider.SetError(txtbox, "Key Tag already exist")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
+
+    Public Function ValidateLock(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+        If txtbox.Text = "" Then
+            errorProvider.SetError(txtbox, "Field should not be empty")
+            Beep()
+            Return False
+        ElseIf isExistLock(txtbox.Text) Then
+            errorProvider.SetError(txtbox, "Lock already exist")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
+
     'Public Function ValidateID(errorProvider As ErrorProvider, txtbox As MaskedTextBox, message As String, searchBox As MaskedTextBox) As Boolean
     '    If searchBox.Focused Then
     '        errorProvider.SetError(txtbox, "")
@@ -250,6 +299,7 @@ Module ValidationModule
     '        Return True
     '    End If
     'End Function
+
 
     'Public Function ValidateIDStaff(errorProvider As ErrorProvider, txtbox As MaskedTextBox, message As String, searchBox As MaskedTextBox) As Boolean
     '    If searchBox.Focused Then
@@ -277,16 +327,36 @@ Module ValidationModule
     '    End If
     'End Function
 
-    Public Function ValidatePhoneN0(errorProvider As ErrorProvider, txtbox As MaskedTextBox, message As String, searchBox As MaskedTextBox) As Boolean
-        If searchBox.Focused Then
-            errorProvider.SetError(txtbox, "")
-            Return False
-        ElseIf txtbox.Text = "" Then
+    Public Function ValidateStaffPhoneN0(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+        If txtbox.Text = "" Then
             errorProvider.SetError(txtbox, "Field should not be empty")
             Beep()
             Return False
-        ElseIf txtbox.Text.Length < 14 Then
-            errorProvider.SetError(txtbox, message)
+        ElseIf txtbox.Text.Length < 10 Then
+            errorProvider.SetError(txtbox, "Invalid Phone number")
+            Beep()
+            Return False
+        ElseIf IsExistStaffPhone(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Phone number already exist")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(txtbox, "")
+            Return True
+        End If
+    End Function
+
+    Public Function ValidateUserPhoneN0(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+        If txtbox.Text = "" Then
+            errorProvider.SetError(txtbox, "Field should not be empty")
+            Beep()
+            Return False
+        ElseIf txtbox.Text.Length < 10 Then
+            errorProvider.SetError(txtbox, "Invalid Phone number")
+            Beep()
+            Return False
+        ElseIf IsExistUserPhoneNo(txtbox.Text.Trim) Then
+            errorProvider.SetError(txtbox, "Phone number already exist")
             Beep()
             Return False
         Else

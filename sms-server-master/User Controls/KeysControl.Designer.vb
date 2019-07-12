@@ -25,8 +25,11 @@ Partial Class KeysControl
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(KeysControl))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
+        Me.lblloader = New System.Windows.Forms.Label()
         Me.lvData = New System.Windows.Forms.ListView()
         Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.key_tag = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -44,10 +47,10 @@ Partial Class KeysControl
         Me.lblMsg = New System.Windows.Forms.Label()
         Me.panelButtonTray = New System.Windows.Forms.Panel()
         Me.panelButtons = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAddKey = New System.Windows.Forms.Button()
+        Me.btnEditKey = New System.Windows.Forms.Button()
+        Me.btnViewKey = New System.Windows.Forms.Button()
+        Me.btnDeleteKey = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
@@ -59,12 +62,36 @@ Partial Class KeysControl
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(990, 35)
         Me.Panel1.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Maroon
+        Me.Label2.Location = New System.Drawing.Point(764, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 20)
+        Me.Label2.TabIndex = 207
+        Me.Label2.Text = "Search:"
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(829, 3)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(160, 26)
+        Me.txtSearch.TabIndex = 206
         '
         'Label1
         '
@@ -82,6 +109,7 @@ Partial Class KeysControl
         'panelMain
         '
         Me.panelMain.BackColor = System.Drawing.Color.White
+        Me.panelMain.Controls.Add(Me.lblloader)
         Me.panelMain.Controls.Add(Me.lvData)
         Me.panelMain.Controls.Add(Me.Panel1)
         Me.panelMain.Controls.Add(Me.Panel3)
@@ -92,6 +120,19 @@ Partial Class KeysControl
         Me.panelMain.Name = "panelMain"
         Me.panelMain.Size = New System.Drawing.Size(990, 470)
         Me.panelMain.TabIndex = 1
+        '
+        'lblloader
+        '
+        Me.lblloader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblloader.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblloader.Font = New System.Drawing.Font("Century Gothic", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblloader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.lblloader.Location = New System.Drawing.Point(0, 35)
+        Me.lblloader.Name = "lblloader"
+        Me.lblloader.Size = New System.Drawing.Size(990, 368)
+        Me.lblloader.TabIndex = 208
+        Me.lblloader.Text = "Loading..."
+        Me.lblloader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lvData
         '
@@ -138,7 +179,7 @@ Partial Class KeysControl
         'block
         '
         Me.block.Text = "Block"
-        Me.block.Width = 106
+        Me.block.Width = 124
         '
         'key_location
         '
@@ -157,7 +198,7 @@ Partial Class KeysControl
         'created_at
         '
         Me.created_at.Text = "Date Created"
-        Me.created_at.Width = 74
+        Me.created_at.Width = 106
         '
         'updated_at
         '
@@ -220,87 +261,90 @@ Partial Class KeysControl
         '
         'panelButtons
         '
-        Me.panelButtons.Controls.Add(Me.Button5)
-        Me.panelButtons.Controls.Add(Me.Button3)
-        Me.panelButtons.Controls.Add(Me.Button1)
-        Me.panelButtons.Controls.Add(Me.Button2)
+        Me.panelButtons.Controls.Add(Me.btnAddKey)
+        Me.panelButtons.Controls.Add(Me.btnEditKey)
+        Me.panelButtons.Controls.Add(Me.btnViewKey)
+        Me.panelButtons.Controls.Add(Me.btnDeleteKey)
         Me.panelButtons.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelButtons.Location = New System.Drawing.Point(149, 0)
         Me.panelButtons.Name = "panelButtons"
         Me.panelButtons.Size = New System.Drawing.Size(641, 37)
         Me.panelButtons.TabIndex = 159
         '
-        'Button5
+        'btnAddKey
         '
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button5.Image = Global.sms_server_master.My.Resources.Resources._035_add_2
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(3, 1)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(134, 35)
-        Me.Button5.TabIndex = 226
-        Me.Button5.Text = " Add Key"
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnAddKey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnAddKey.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnAddKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnAddKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddKey.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddKey.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnAddKey.Image = Global.sms_server_master.My.Resources.Resources._035_add_2
+        Me.btnAddKey.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddKey.Location = New System.Drawing.Point(3, 1)
+        Me.btnAddKey.Name = "btnAddKey"
+        Me.btnAddKey.Size = New System.Drawing.Size(134, 35)
+        Me.btnAddKey.TabIndex = 226
+        Me.btnAddKey.Text = " Add Key"
+        Me.btnAddKey.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAddKey.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnEditKey
         '
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button3.Image = Global.sms_server_master.My.Resources.Resources._021_edit
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(145, 1)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 35)
-        Me.Button3.TabIndex = 225
-        Me.Button3.Text = " Update Key"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEditKey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnEditKey.Enabled = False
+        Me.btnEditKey.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnEditKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnEditKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditKey.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditKey.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnEditKey.Image = Global.sms_server_master.My.Resources.Resources._021_edit
+        Me.btnEditKey.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditKey.Location = New System.Drawing.Point(145, 1)
+        Me.btnEditKey.Name = "btnEditKey"
+        Me.btnEditKey.Size = New System.Drawing.Size(134, 35)
+        Me.btnEditKey.TabIndex = 225
+        Me.btnEditKey.Text = " Edit Key"
+        Me.btnEditKey.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEditKey.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnViewKey
         '
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button1.Image = Global.sms_server_master.My.Resources.Resources._027_eye
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(429, 1)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(134, 35)
-        Me.Button1.TabIndex = 223
-        Me.Button1.Text = " View Key"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnViewKey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnViewKey.Enabled = False
+        Me.btnViewKey.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnViewKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnViewKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewKey.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewKey.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnViewKey.Image = Global.sms_server_master.My.Resources.Resources._027_eye
+        Me.btnViewKey.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewKey.Location = New System.Drawing.Point(429, 1)
+        Me.btnViewKey.Name = "btnViewKey"
+        Me.btnViewKey.Size = New System.Drawing.Size(134, 35)
+        Me.btnViewKey.TabIndex = 223
+        Me.btnViewKey.Text = " View Key"
+        Me.btnViewKey.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnViewKey.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnDeleteKey
         '
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button2.Image = Global.sms_server_master.My.Resources.Resources._029_trash
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(287, 1)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(134, 35)
-        Me.Button2.TabIndex = 224
-        Me.Button2.Text = " Delete Key"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDeleteKey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnDeleteKey.Enabled = False
+        Me.btnDeleteKey.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnDeleteKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnDeleteKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteKey.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteKey.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnDeleteKey.Image = Global.sms_server_master.My.Resources.Resources._029_trash
+        Me.btnDeleteKey.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDeleteKey.Location = New System.Drawing.Point(287, 1)
+        Me.btnDeleteKey.Name = "btnDeleteKey"
+        Me.btnDeleteKey.Size = New System.Drawing.Size(134, 35)
+        Me.btnDeleteKey.TabIndex = 224
+        Me.btnDeleteKey.Text = " Delete Key"
+        Me.btnDeleteKey.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDeleteKey.UseVisualStyleBackColor = True
         '
         'Panel6
         '
@@ -321,10 +365,12 @@ Partial Class KeysControl
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.panelMain)
+        Me.Location = New System.Drawing.Point(280, 160)
         Me.Name = "KeysControl"
         Me.Padding = New System.Windows.Forms.Padding(30, 15, 30, 15)
         Me.Size = New System.Drawing.Size(1050, 500)
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.panelMain.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.panelButtonTray.ResumeLayout(False)
@@ -349,14 +395,17 @@ Partial Class KeysControl
     Friend WithEvents updated_at As ColumnHeader
     Friend WithEvents Timer1 As Timer
     Friend WithEvents panelButtonTray As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAddKey As Button
+    Friend WithEvents btnEditKey As Button
+    Friend WithEvents btnDeleteKey As Button
+    Friend WithEvents btnViewKey As Button
     Friend WithEvents panelButtons As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents lblCount As Label
     Friend WithEvents lblMsg As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents lblloader As Label
 End Class

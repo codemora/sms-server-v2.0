@@ -4,8 +4,6 @@ Public Class Splash_Screen
         RectangleShape2.Width += 2
         If RectangleShape2.Width = 400 Then
             Timer1.Stop()
-            Dashboard.Show()
-            Me.Close()
         End If
     End Sub
 
@@ -36,11 +34,18 @@ Public Class Splash_Screen
 
     'Generates the connection String
     Private Sub NewConString(serverName As String)
-        ' My.Settings.SMSConnectionString = "Data Source=" + serverName + ";Initial Catalog=SMSdb;Integrated Security=True"
+        My.Settings.SMSConnectionString = "Data Source=" + serverName + ";Initial Catalog=smsdb;Integrated Security=True"
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        ' NewConString(GetServer)
+        NewConString(GetServer)
         blockAllExpiredStaff()
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        If RectangleShape2.Width < 400 Then Timer1.Stop() : RectangleShape2.Width = 400
+        Log_In.Show()
+        Me.Close()
+
     End Sub
 End Class

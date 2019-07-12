@@ -210,5 +210,25 @@
         Return KeyList
     End Function
 
-
+    '
+    'Returns All Keys
+    '
+    Public Function getAllKeyBySearch(search As String) As List(Of Key)
+        Dim KeyList As New List(Of Key)
+        For Each keylock In TA.GetDataBySearch(search)
+            Dim id As Integer = keylock.Item("id")
+            Dim key_type As String = keylock.Item("type").ToString()
+            Dim lock As String = keylock.Item("lock").ToString()
+            Dim block As String = keylock.Item("block").ToString()
+            Dim location As String = keylock.Item("block").ToString()
+            Dim tag As String = keylock.Item("tag").ToString()
+            Dim quantity As Integer = keylock.Item("quantity")
+            Dim status As String = keylock.Item("status").ToString()
+            Dim created_at As Date = keylock.Item("created_at")
+            Dim updated_at As Date = keylock.Item("updated_at")
+            'adds Key object to KeyList
+            KeyList.Add(New Key(id, tag, key_type, lock, block, location, quantity, status, created_at, updated_at))
+        Next
+        Return KeyList
+    End Function
 End Module

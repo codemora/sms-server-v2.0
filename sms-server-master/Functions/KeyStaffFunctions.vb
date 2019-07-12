@@ -74,7 +74,7 @@
     Public Function getAllKeyStaffByKeyId(key_id As Integer) As List(Of KeyStaff)
         'create list of KeyStaffs
         Dim key_staff_list As New List(Of KeyStaff)
-        For Each key_staff In TA.GetDataByStaffId(key_id)
+        For Each key_staff In TA.GetDataByKeyId(key_id)
             Dim id As Integer = key_staff.Item("id")
             Dim staff_id As Integer = key_staff.Item("staff_id")
             Dim is_fav As Boolean = key_staff.Item("is_fav")

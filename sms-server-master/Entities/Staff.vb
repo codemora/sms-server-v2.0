@@ -2,14 +2,13 @@
 
     Private id As Integer
     Private ref As String
-    Private last_name As String
-    Private other_names As String
+    Private fullname As String
     Private gender As String
     Private department As String
     Private position As String
     Private pass_code As String
     Private phone As String
-    Private second_phone As String
+    Private email As String
     Private security_question As String
     Private security_answer As String
     Private image As Byte()
@@ -18,14 +17,13 @@
     Private created_at As DateTime
     Private updated_at As DateTime
 
-    Public Sub New(id As Integer, ref As String, last_name As String, other_names As String, gender As String, department As String, position As String, pass_code As String, phone As String, second_phone As String, security_question As String, security_answer As String, image As Byte(), is_active As Boolean, deleted_at As DateTime?, created_at As DateTime, updated_at As DateTime)
+    Public Sub New(id As Integer, ref As String, fullname As String, gender As String, department As String, position As String, pass_code As String, phone As String, email As String, security_question As String, security_answer As String, image As Byte(), is_active As Boolean, deleted_at As DateTime?, created_at As DateTime, updated_at As DateTime)
 
         Me.id = id
         Me.ref = ref.Trim
-        Me.last_name = last_name.Trim
-        Me.other_names = other_names.Trim
+        Me.fullname = fullname.Trim
         Me.phone = phone.Trim
-        Me.second_phone = second_phone.Trim
+        Me.email = email.Trim
         Me.gender = gender.Trim
         Me.position = position.Trim
         Me.security_question = security_question
@@ -57,18 +55,15 @@
     Public Function getRef() As String
         Return Me.ref
     End Function
-    Public Function getLastName() As String
-        Return Me.last_name
+    Public Function getFullname() As String
+        Return Me.fullname
     End Function
 
-    Public Function getOtherNames() As String
-        Return Me.other_names
-    End Function
     Public Function getPhone() As String
         Return Me.phone
     End Function
-    Public Function getSecondPhone() As String
-        Return Me.second_phone
+    Public Function getEmail() As String
+        Return Me.email
     End Function
     Public Function getGender() As String
         Return Me.gender

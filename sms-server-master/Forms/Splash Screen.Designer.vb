@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Splash_Screen
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,26 @@ Partial Class Splash_Screen
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Splash_Screen))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 1
+        Me.Timer1.Interval = 60
         '
         'BackgroundWorker1
         '
@@ -65,25 +67,15 @@ Partial Class Splash_Screen
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(10, 8)
         '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(520, 255)
-        Me.ShapeContainer1.TabIndex = 21
-        Me.ShapeContainer1.TabStop = False
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(394, 239)
+        Me.Label4.Location = New System.Drawing.Point(392, 245)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 13)
-        Me.Label4.TabIndex = 25
+        Me.Label4.TabIndex = 30
         Me.Label4.Text = "All copyright © reserved"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -94,9 +86,9 @@ Partial Class Splash_Screen
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(220, 81)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 24)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "ver 2.0"
+        Me.Label3.Size = New System.Drawing.Size(97, 24)
+        Me.Label3.TabIndex = 29
+        Me.Label3.Text = "ver 2.0.2"
         '
         'Label2
         '
@@ -106,7 +98,7 @@ Partial Class Splash_Screen
         Me.Label2.Location = New System.Drawing.Point(68, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(343, 24)
-        Me.Label2.TabIndex = 23
+        Me.Label2.TabIndex = 28
         Me.Label2.Text = "Key Management System (UENR)"
         '
         'Label1
@@ -117,21 +109,45 @@ Partial Class Splash_Screen
         Me.Label1.Location = New System.Drawing.Point(57, 38)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(184, 77)
-        Me.Label1.TabIndex = 22
+        Me.Label1.TabIndex = 27
         Me.Label1.Text = "KMS"
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(517, 261)
+        Me.ShapeContainer1.TabIndex = 26
+        Me.ShapeContainer1.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(3, 243)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(124, 13)
+        Me.Label5.TabIndex = 31
+        Me.Label5.Text = "Developed By: Codemora"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Splash_Screen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(520, 255)
+        Me.ClientSize = New System.Drawing.Size(517, 261)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Splash_Screen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Splash_Screen"
@@ -139,13 +155,15 @@ Partial Class Splash_Screen
         Me.PerformLayout()
 
     End Sub
+
     Friend WithEvents Timer1 As Timer
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
     Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
-    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents Label5 As Label
 End Class

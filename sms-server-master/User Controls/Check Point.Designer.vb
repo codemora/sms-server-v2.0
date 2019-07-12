@@ -195,6 +195,7 @@ Partial Class Check_Point
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.panelMain)
+        Me.Location = New System.Drawing.Point(280, 160)
         Me.Margin = New System.Windows.Forms.Padding(0)
         Me.Name = "Check_Point"
         Me.Padding = New System.Windows.Forms.Padding(30, 15, 30, 15)

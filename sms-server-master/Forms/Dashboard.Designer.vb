@@ -22,11 +22,13 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.panActive = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnUsers = New System.Windows.Forms.Button()
         Me.btnKeys = New System.Windows.Forms.Button()
         Me.btnStaff = New System.Windows.Forms.Button()
@@ -100,6 +102,7 @@ Partial Class Dashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.btnUsers)
         Me.Panel1.Controls.Add(Me.btnKeys)
@@ -112,6 +115,19 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(280, 640)
         Me.Panel1.TabIndex = 13
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(-1, 598)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 39)
+        Me.Label5.TabIndex = 32
+        Me.Label5.Text = "Developed By: Codemora" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Eugene - 0573235605" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Oka - 0246477024"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnUsers
         '
@@ -331,7 +347,7 @@ Partial Class Dashboard
         Me.pboxDisplayImage.Location = New System.Drawing.Point(1231, 28)
         Me.pboxDisplayImage.Name = "pboxDisplayImage"
         Me.pboxDisplayImage.Size = New System.Drawing.Size(30, 29)
-        Me.pboxDisplayImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pboxDisplayImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pboxDisplayImage.TabIndex = 18
         Me.pboxDisplayImage.TabStop = False
         '
@@ -347,6 +363,7 @@ Partial Class Dashboard
         Me.Controls.Add(Me.pboxDisplayImage)
         Me.Controls.Add(Me.lblDisplayName)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Dashboard"
         Me.Padding = New System.Windows.Forms.Padding(0, 60, 0, 0)
         Me.Style = MetroFramework.MetroColorStyle.White
@@ -355,6 +372,7 @@ Partial Class Dashboard
         Me.Panel4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -385,4 +403,5 @@ Partial Class Dashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents panelContent As Panel
+    Friend WithEvents Label5 As Label
 End Class

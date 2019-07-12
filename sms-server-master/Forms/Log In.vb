@@ -8,26 +8,27 @@
 
         If txtUsername.Text.Trim = "" Or txtPassword.Text.Trim = "" Then
             lblError.Text = "Please Fill All Fields"
-        ElseIf IsExistUsername(txtUsername.Text.Trim) Then
-            If checkUser(txtUsername.Text.Trim, txtPassword.Text.Trim) Then
-                Dim user As User = getUserByUsername(txtUsername.Text.Trim)
-                My.Settings.DISPLAY_NAME = getDisplayName(user.getOtherNames)
-                My.Settings.PRIVILEGE = user.getPrivilege
-                My.Settings.USER_ID = user.getId
-                My.Settings.DISPLAY_IMAGE = convertByteToString(user.getImage)
-                If user.getSecurityQuestion() = "" Or user.getSecurityAnswer() = "" Then
-                    Create_Password.ShowDialog()
-                Else
-                    Dashboard.Show()
-                    Me.Close()
-                End If
+        ElseIf checkUser(txtUsername.Text.Trim, txtPassword.Text.Trim) Then
+            Dim user As User = getUserByUsername(txtUsername.Text.Trim)
+            My.Settings.DISPLAY_NAME = getDisplayName(user.getFullname)
+            My.Settings.PRIVILEGE = user.getPrivilege
+            My.Settings.USER_ID = user.getId
+            My.Settings.DISPLAY_IMAGE = convertByteToString(user.getImage)
+            If user.getSecurityQuestion() = "" Or user.getSecurityAnswer() = "" Then
+                Create_Password.ShowDialog()
+            ElseIf user.getPrivilege.ToLower = "user" Then
+                Dashboard.Show()
+                Dashboard.btnStaff.Visible = False
+                Dashboard.btnUsers.Visible = False
+                Dashboard.btnKeys.Visible = False
+                Me.Close()
             Else
-                lblError.Text = "Incorrect username or password"
+                Dashboard.Show()
+                Me.Close()
             End If
         Else
             lblError.Text = "Incorrect username or password"
         End If
-
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -55,5 +56,16 @@
         Else
             pboxEye.Visible = False
         End If
+    End Sub
+
+    Private Sub Log_In_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not IsExistUser() Then
+            Dim user As New User(1, "Administrator", "Admin", "admin", "12345678", "05732325605", "What was the first company you worked for?", "UENR", ConvertToByteArray(My.Resources.Profile_Image), True, CDate("12/12/9998"), Now, Now)
+            addUser(user)
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
     End Sub
 End Class

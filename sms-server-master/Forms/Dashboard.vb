@@ -48,6 +48,7 @@
             staff1.Visible = False
             logs1.Visible = False
             users1.Visible = False
+
         End If
     End Sub
 
@@ -77,44 +78,42 @@
 
         'Adds Users control to the Dashboard
         users1 = New UsersControl
+        users1.Visible = False
+        users1.Dock = DockStyle.Fill
         Me.Controls.Add(users1)
         'users1.Location = New Point(0, 0)
-        users1.Dock = DockStyle.Fill
         users1.BringToFront()
-        users1.Visible = False
 
         'Adds Keys control to the Dashboard
         keys1 = New KeysControl
+        keys1.Visible = False
+        keys1.Dock = DockStyle.Fill
         Me.Controls.Add(keys1)
         'keys1.Location = New Point(0, 0)
-        keys1.Dock = DockStyle.Fill
         keys1.BringToFront()
-        keys1.Visible = False
 
         'Adds Staff control to the Dashboard
         staff1 = New StaffControl
+        staff1.Visible = False
         staff1.Dock = DockStyle.Fill
         Me.Controls.Add(staff1)
-        staff1.Location = New Point(0, 0)
         staff1.BringToFront()
-        staff1.Visible = False
 
         'Adds Logs control to the Dashboard
         logs1 = New LogsControl
+        logs1.Visible = False
+        logs1.Dock = DockStyle.Fill
         Me.Controls.Add(logs1)
         'logs1.Location = New Point(0, 0)
-        logs1.Dock = DockStyle.Fill
         logs1.BringToFront()
-        logs1.Visible = False
 
         'Adds Checkpoint control to the Dashboard
         checkpoint1 = New Check_Point
+        checkpoint1.Visible = False
         checkpoint1.Dock = DockStyle.Fill
         Me.Controls.Add(checkpoint1)
         checkpoint1.BringToFront()
-
-
-        showLoader()
+        checkpoint1.Visible = True
 
     End Sub
 
@@ -125,6 +124,7 @@
 
     'shows the preloader
     Public Sub showLoader()
+        hideNoRecordDisplay()
         loader1.Location = New Point(((Me.Width - 280) / 2) - 50 + 280, ((Me.Height - 260) / 2) - 50 + 195)
         loader1.BringToFront()
         loading = True
@@ -151,7 +151,7 @@
 
     'shows the NoRecordDisplay
     Public Sub showNoRecordDisplay()
-        no_record1.Location = New Point(((Me.Width - 280) / 2) - 100 + 280, ((Me.Height - 260) / 2) - 25 + 195)
+        no_record1.Location = New Point(((Me.Width - 280) / 2) - 110 + 280, ((Me.Height - 260) / 2) - 25 + 195)
         no_record1.BringToFront()
         no_record_found = True
     End Sub
