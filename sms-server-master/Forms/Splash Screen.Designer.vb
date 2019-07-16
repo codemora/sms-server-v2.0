@@ -88,7 +88,7 @@ Partial Class Splash_Screen
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 24)
         Me.Label3.TabIndex = 29
-        Me.Label3.Text = "ver 2.0.2"
+        Me.Label3.Text = "ver 2.0.4"
         '
         'Label2
         '

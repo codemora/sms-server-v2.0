@@ -1,29 +1,5 @@
 ﻿Imports System.Text.RegularExpressions
 Module ValidationModule
-    'Public student As New StudentFunctions
-    'Public staff As New StaffFunctions
-    'Public user As New UserFunctions
-    '
-    'Options
-    '
-    'Public Enum keyType 'Search type options
-    '    Id
-    '    Room
-    '    Phone
-    'End Enum
-
-    'Public Function GetOption(cmb As ComboBox) As keyType 'Gets a Search Type option 
-    '    If cmb.SelectedItem = "Id" Then
-    '        Return keyType.Id
-    '    ElseIf cmb.SelectedItem = "Room" Then
-    '        Return keyType.Room
-    '    ElseIf cmb.SelectedItem = "Phone" Then
-    '        Return keyType.Phone
-    '    Else
-    '        Return keyType.Id
-    '    End If
-    'End Function
-
     '
     'VALIDATION FUNCTIONS
     '
@@ -156,9 +132,6 @@ Module ValidationModule
     End Function
 
     Public Function ValidateComboBox(errorProvider As ErrorProvider, cmbBox As ComboBox) As Boolean
-        'If searchBox.Focused Then
-        '    errorProvider.SetError(cmbBox, "")
-        '    Return False
         If cmbBox.SelectedIndex = 0 Then
             errorProvider.SetError(cmbBox, "Select an option")
             Beep()
@@ -245,11 +218,16 @@ Module ValidationModule
     End Function
 
     Public Function ValidateKeyTag(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
+
         If txtbox.Text = "" Then
             errorProvider.SetError(txtbox, "Field should not be empty")
             Beep()
             Return False
-        ElseIf isExistKey(txtbox.text) Then
+        ElseIf txtbox.Text.Trim.IndexOf(" ") > -1 Then
+            errorProvider.SetError(txtbox, "Key Tag must not include space")
+            Beep()
+            Return False
+        ElseIf isExistKey(txtbox.Text) Then
             errorProvider.SetError(txtbox, "Key Tag already exist")
             Beep()
             Return False

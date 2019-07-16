@@ -122,11 +122,11 @@ Partial Class Dashboard
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(-1, 598)
+        Me.Label5.Location = New System.Drawing.Point(3, 611)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 39)
+        Me.Label5.Size = New System.Drawing.Size(203, 26)
         Me.Label5.TabIndex = 32
-        Me.Label5.Text = "Developed By: Codemora" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Eugene - 0573235605" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Oka - 0246477024"
+        Me.Label5.Text = "Developed By: Codemora" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Eugene - 0573235605  Oka - 0246577024"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnUsers

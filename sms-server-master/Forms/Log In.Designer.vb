@@ -26,17 +26,17 @@ Partial Class Log_In
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.lblError = New System.Windows.Forms.Label()
+        Me.pboxEye = New System.Windows.Forms.PictureBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.pboxEye = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pboxEye, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,15 +90,49 @@ Partial Class Log_In
         Me.lblError.TabIndex = 19
         Me.lblError.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
+        'pboxEye
+        '
+        Me.pboxEye.BackColor = System.Drawing.SystemColors.Window
+        Me.pboxEye.Image = Global.sms_server_master.My.Resources.Resources.eye_1
+        Me.pboxEye.Location = New System.Drawing.Point(317, 259)
+        Me.pboxEye.Name = "pboxEye"
+        Me.pboxEye.Padding = New System.Windows.Forms.Padding(2)
+        Me.pboxEye.Size = New System.Drawing.Size(28, 31)
+        Me.pboxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pboxEye.TabIndex = 18
+        Me.pboxEye.TabStop = False
+        Me.pboxEye.Visible = False
+        '
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.ForeColor = System.Drawing.Color.Black
         Me.txtPassword.Location = New System.Drawing.Point(136, 258)
         Me.txtPassword.MaxLength = 16
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(210, 33)
         Me.txtPassword.TabIndex = 1
         Me.txtPassword.UseSystemPasswordChar = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(103, 258)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(31, 33)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(105, 207)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 33)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
         '
         'Label1
         '
@@ -110,6 +144,16 @@ Partial Class Log_In
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "LOGIN"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.sms_server_master.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(167, 25)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(110, 102)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'btnCancel
         '
@@ -143,7 +187,7 @@ Partial Class Log_In
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.ForeColor = System.Drawing.Color.Maroon
+        Me.txtUsername.ForeColor = System.Drawing.Color.Black
         Me.txtUsername.Location = New System.Drawing.Point(136, 207)
         Me.txtUsername.MaxLength = 16
         Me.txtUsername.Name = "txtUsername"
@@ -173,49 +217,6 @@ Partial Class Log_In
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Username"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pboxEye
-        '
-        Me.pboxEye.BackColor = System.Drawing.SystemColors.Window
-        Me.pboxEye.Image = Global.sms_server_master.My.Resources.Resources.eye_1
-        Me.pboxEye.Location = New System.Drawing.Point(317, 259)
-        Me.pboxEye.Name = "pboxEye"
-        Me.pboxEye.Padding = New System.Windows.Forms.Padding(2)
-        Me.pboxEye.Size = New System.Drawing.Size(28, 31)
-        Me.pboxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pboxEye.TabIndex = 18
-        Me.pboxEye.TabStop = False
-        Me.pboxEye.Visible = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(103, 258)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(31, 33)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(105, 207)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(31, 33)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.sms_server_master.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(167, 25)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(110, 102)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
         '
         'Log_In
         '

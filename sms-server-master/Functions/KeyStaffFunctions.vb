@@ -21,7 +21,11 @@
     '
     Public Function deleteKeyStaff(staff As Staff) As Boolean
         Try
-            Return TA.DeleteByStaffId(staff.getId)
+            If getAllKeyStaffByStaffId(staff.getId).Count = 0 Then
+                Return True
+            Else
+                Return TA.DeleteByStaffId(staff.getId)
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
             Return False

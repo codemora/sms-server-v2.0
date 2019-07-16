@@ -1,5 +1,7 @@
 ﻿Public Class Edit_User
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Reset()
+
         With users1.selected_user
             cmbPrivilege.SelectedItem = .getPrivilege
             txtFullname.Text = .getFullname
@@ -23,21 +25,20 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        If Not (users1.selected_user.getUsername.ToLower = txtUsername.Text.Trim.ToLower) Then If Not ValidateUsername(ErrorProvider1, txtUsername) Then Exit Sub
+        If Not (users1.selected_user.getPhone.ToLower = txtPhone.Text.Trim.ToLower) Then If Not ValidateUserPhoneN0(ErrorProvider1, txtPhone) Then Exit Sub
         If Not (ValidateText(ErrorProvider1, txtFullname) And
-                ValidateComboBox(ErrorProvider1, cmbPrivilege) And
-                (users1.selected_user.getUsername = txtUsername.Text.Trim Or ValidateUsername(ErrorProvider1, txtUsername)) And
-                (users1.selected_user.getPhone = txtPhone.Text.Trim Or ValidateUserPhoneN0(ErrorProvider1, txtPhone))) Then
+        ValidateComboBox(ErrorProvider1, cmbPrivilege)) Then
             Exit Sub
         End If
+
         Dim user As New User(users1.selected_user.getId, txtFullname.Text, cmbPrivilege.Text, txtUsername.Text, users1.selected_user.getPassword, txtPhone.Text, users1.selected_user.getSecurityQuestion, users1.selected_user.getSecurityAnswer, ConvertToByteArray(PictureBox1.Image), users1.selected_user.getIsActive, users1.selected_user.getDeletedAt, users1.selected_user.getCreatedAt, Now)
 
         If updateUser(user) Then
             users1.UpdateRecord(users1.selected_item, user)
             message = "Update Successful"
             ShowMessage(users1.Timer1, users1.lblMsg, Color.LimeGreen, message)
-            Reset()
             Me.Close()
-            Exit Sub
         Else
             message = "Update failed"
             ShowMessage(users1.Timer1, users1.lblMsg, Color.Red, message)
@@ -53,11 +54,11 @@
     End Sub
 
     Private Sub txtUsername_Leave(sender As Object, e As EventArgs) Handles txtUsername.Leave
-        If Not users1.selected_user.getUsername = txtUsername.Text.Trim Then ValidateUsername(ErrorProvider1, txtUsername)
+        If Not (users1.selected_user.getUsername.ToLower = txtUsername.Text.Trim.ToLower) Then ValidateUsername(ErrorProvider1, txtUsername)
     End Sub
 
     Private Sub txtPhone_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
-        If Not (users1.selected_user.getPhone = txtPhone.Text.Trim) Then ValidateUserPhoneN0(ErrorProvider1, txtPhone)
+        If Not (users1.selected_user.getPhone.ToLower = txtPhone.Text.Trim.ToLower) Then ValidateUserPhoneN0(ErrorProvider1, txtPhone)
     End Sub
 
     Private Sub Edit_User_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

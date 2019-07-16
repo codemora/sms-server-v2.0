@@ -7,6 +7,9 @@
             If .getStatus.ToLower = "in" Then
                 lblActive.Text = "In"
                 lblActive.BackColor = Color.Green
+            ElseIf .getStatus.ToLower = "pending" Then
+                lblActive.Text = "Pending"
+                lblActive.BackColor = Color.Blue
             Else
                 lblActive.Text = "Out"
                 lblActive.BackColor = Color.Red

@@ -192,7 +192,6 @@ Partial Class Edit_Key
         '
         'txtLock
         '
-        Me.txtLock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLock.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLock.Location = New System.Drawing.Point(108, 114)
         Me.txtLock.Multiline = True
@@ -205,7 +204,7 @@ Partial Class Edit_Key
         Me.cmbBlock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbBlock.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbBlock.FormattingEnabled = True
-        Me.cmbBlock.Items.AddRange(New Object() {"-----Select Key Location-----", "3cgs", "Administration Block", "Apel Block", "App Lab", "Auditorium", "Basic School", "Cafeteria", "Eoric", "Estate", "Finance Directorate", "Getfund Hostel", "Human Resources", "It Directorate", "Laboratory", "Library Block", "Main Block (Lts)", "Main Entrance", "Opposite Hostel Entrance", "Sawmill", "Security", "South Entrance", "University Clinic", "Others"})
+        Me.cmbBlock.Items.AddRange(New Object() {"-----Select Block-----", "3CGS", "Administration", "Apel Block", "App Lab", "Auditorium", "Basic School", "Cafeteria", "Eoric", "Estate", "Finance Directorate", "Getfund Hostel", "Human Resources", "It Directorate", "Laboratory", "Library Block", "Main Block (Lts)", "Main Entrance", "Opposite Hostel Entrance", "Sawmill", "Security", "South Entrance", "University Clinic", "Others"})
         Me.cmbBlock.Location = New System.Drawing.Point(108, 158)
         Me.cmbBlock.Name = "cmbBlock"
         Me.cmbBlock.Size = New System.Drawing.Size(230, 29)

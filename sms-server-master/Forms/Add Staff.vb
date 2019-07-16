@@ -20,19 +20,17 @@ Public Class Add_Staff
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         ListKeys.Items.Clear()
-        If ComboBox1.SelectedIndex = 0 Then
-            For Each key In getAllKey()
-                If Not ListKeys.Items.Contains(key.getLock) Then
-                    ListKeys.Items.Add(key.getLock)
-                End If
-            Next
-        ElseIf ComboBox1.SelectedIndex > 0 Then
-            For Each key In getAllKey(ComboBox1.SelectedItem)
-                If Not ListKeys.Items.Contains(key.getLock) Then
-                    ListKeys.Items.Add(key.getLock)
-                End If
-            Next
+        Dim keys As List(Of Key)
+        If ComboBox1.SelectedIndex < 1 Then
+            keys = getAllKey()
+        Else
+            keys = getAllKey(ComboBox1.SelectedItem)
         End If
+        For Each key In keys
+            If Not ListKeys.Items.Contains(key.getLock) Then
+                ListKeys.Items.Add(key.getLock)
+            End If
+        Next
     End Sub
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
@@ -62,7 +60,12 @@ Public Class Add_Staff
         Dim staff As New Staff(0, txtStaffRef.Text, txtFullname.Text, cmbGender.Text, cmbDepartment.Text, cmbPosition.Text, Nothing, txtPhone.Text, txtEmail.Text, Nothing, Nothing, ConvertToByteArray(PictureBox1.Image), True, deleted_at, Now(), Now())
 
         If ListKeys.Items.Count > 0 Then
-            If addStaff(staff) Then
+            message = "Atleast 1 key must be selected"
+            ShowMessage(Timer1, lblMsg, Color.Red, message)
+            Exit Sub
+        End If
+
+        If addStaff(staff) Then
                 staff = getStaffByRef(staff.getRef)
                 'Creates a list of keys the staff can have access to
                 Dim staffkeys As New List(Of KeyStaff)
@@ -83,10 +86,6 @@ Public Class Add_Staff
                 ShowMessage(Timer1, lblMsg, Color.Red, message)
                 Exit Sub
             End If
-        Else
-            message = "Atleast 1 key must be selected"
-            ShowMessage(Timer1, lblMsg, Color.Red, message)
-        End If
 
     End Sub
 
@@ -115,6 +114,7 @@ Public Class Add_Staff
         For Each itm In ListKeys.CheckedIndices
             ListKeys.SetItemChecked(itm, False)
         Next
+        ListKeys.ClearSelected()
         cmbDepartment.Focus()
     End Sub
 

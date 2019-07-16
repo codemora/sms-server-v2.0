@@ -199,7 +199,7 @@ Partial Class Edit_Staff
         Me.cmbDepartment.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbDepartment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cmbDepartment.FormattingEnabled = True
-        Me.cmbDepartment.Items.AddRange(New Object() {"----------Select Department----------", "3cgs", "Academics And Students Affairs", "Basic And Applied Biology", "Business Development Unit", "Cafetaria", "Chemical Sciences", "Computer Science And Informatics", "Ecotourism, Recreation And Hospitality", "Energy And Environmental Engineering", "Entrepreneurship And Business Sciences", "Environmental Management", "Eoric", "Estate", "Examinations Office", "Finance Directorate", "Fisheries And Water Resources", "Forest Science", "General Administration  Division/Transport", "Graduate Studies", "Guidance And Couselling", "Horticulture And Crops/Animal Production", "Human Resources", "Ict Directorate", "Internal Audit", "Languages And General Studies", "Legal", "Library", "Mathematics And Statistics", "Mechanical And Manufacturing Engineering", "Office Of The Dean Of Students", "Office Of The Pro Vice-Chancellor", "Office Of The Registrar", "Office Of The Vice-Chancellor", "Procurement", "Quality Assurance And Planning", "School Of Agriculture", "School Of Engineering", "School Of Management Sciences And Law", "School Of Sciences", "Security Services", "Sports", "Uenr Basic School", "University Clinic", "University Relations Office", "Works And Physical Development", "Others"})
+        Me.cmbDepartment.Items.AddRange(New Object() {"----------Select Department----------", "3CGS", "Academics And Students Affairs", "Basic And Applied Biology", "Business Development Unit", "Cafetaria", "Chemical Sciences", "Computer Science And Informatics", "Ecotourism, Recreation And Hospitality", "Energy And Environmental Engineering", "Entrepreneurship And Business Sciences", "Environmental Management", "Eoric", "Estate", "Examinations Office", "Finance Directorate", "Fisheries And Water Resources", "Forest Science", "General Administration  Division/Transport", "Graduate Studies", "Guidance And Couselling", "Horticulture And Crops/Animal Production", "Human Resources", "Ict Directorate", "Internal Audit", "Languages And General Studies", "Legal", "Library", "Mathematics And Statistics", "Mechanical And Manufacturing Engineering", "Office Of The Dean Of Students", "Office Of The Pro Vice-Chancellor", "Office Of The Registrar", "Office Of The Vice-Chancellor", "Procurement", "Quality Assurance And Planning", "School Of Agriculture", "School Of Engineering", "School Of Management Sciences And Law", "School Of Sciences", "Security Services", "Sports", "Uenr Basic School", "University Clinic", "University Relations Office", "Works And Physical Development", "Others"})
         Me.cmbDepartment.Location = New System.Drawing.Point(137, 38)
         Me.cmbDepartment.Name = "cmbDepartment"
         Me.cmbDepartment.Size = New System.Drawing.Size(245, 29)
@@ -301,7 +301,7 @@ Partial Class Edit_Staff
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"-----Select Block-----", "3cgs", "Administration Block", "Apel Block", "App Lab", "Auditorium", "Basic School", "Cafeteria", "Eoric", "Estate", "Finance Directorate", "Getfund Hostel", "Human Resources", "It Directorate", "Laboratory", "Library Block", "Main Block (Lts)", "Main Entrance", "Opposite Hostel Entrance", "Sawmill", "Security", "South Entrance", "University Clinic", "Others"})
+        Me.ComboBox1.Items.AddRange(New Object() {"All Blocks", "3CGS", "Administration Block", "Apel Block", "App Lab", "Auditorium", "Basic School", "Cafeteria", "Eoric", "Estate", "Finance Directorate", "Getfund Hostel", "Human Resources", "It Directorate", "Laboratory", "Library Block", "Main Block (Lts)", "Main Entrance", "Opposite Hostel Entrance", "Sawmill", "Security", "South Entrance", "University Clinic", "Others"})
         Me.ComboBox1.Location = New System.Drawing.Point(424, 63)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(207, 24)
@@ -309,6 +309,7 @@ Partial Class Edit_Staff
         '
         'ListKeys
         '
+        Me.ListKeys.CheckOnClick = True
         Me.ListKeys.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListKeys.FormattingEnabled = True
         Me.ListKeys.Location = New System.Drawing.Point(424, 94)

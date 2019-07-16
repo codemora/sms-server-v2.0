@@ -3,19 +3,17 @@
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         ListKeys.Items.Clear()
-        If ComboBox1.SelectedIndex = 0 Then
-            For Each key In getAllKey()
-                If Not ListKeys.Items.Contains(key.getLock) Then
-                    ListKeys.Items.Add(key.getLock)
-                End If
-            Next
-        ElseIf ComboBox1.SelectedIndex > 0 Then
-            For Each key In getAllKey(ComboBox1.SelectedItem)
-                If Not ListKeys.Items.Contains(key.getLock) Then
-                    ListKeys.Items.Add(key.getLock)
-                End If
-            Next
+        Dim keys As List(Of Key)
+        If ComboBox1.SelectedIndex < 1 Then
+            keys = getAllKey()
+        Else
+            keys = getAllKey(ComboBox1.SelectedItem)
         End If
+        For Each key In keys
+            If Not ListKeys.Items.Contains(key.getLock) Then
+                ListKeys.Items.Add(key.getLock)
+            End If
+        Next
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
@@ -26,13 +24,13 @@
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         ErrorProvider1.Clear()
 
+        If Not (staff1.selected_staff.getRef.ToLower = txtStaffRef.Text.Trim.ToLower) Then If Not ValidateStaffRef(ErrorProvider1, txtStaffRef) Then Exit Sub
+        If Not (staff1.selected_staff.getPhone.ToLower = txtPhone.Text.Trim.ToLower) Then If Not ValidateStaffPhoneN0(ErrorProvider1, txtPhone) Then Exit Sub
+        If Not (staff1.selected_staff.getEmail.ToLower = txtEmail.Text.Trim.ToLower) Then If Not ValidateEmail(ErrorProvider1, txtEmail) Then Exit Sub
         If Not (ValidateComboBox(ErrorProvider1, cmbDepartment) And
-                ValidateComboBox(ErrorProvider1, cmbPosition) And
-                (staff1.selected_staff.getRef = txtStaffRef.Text.Trim Or ValidateStaffRef(ErrorProvider1, txtStaffRef)) And
-                ValidateComboBox(ErrorProvider1, cmbGender) And
-                ValidateText(ErrorProvider1, txtFullname) And
-                (staff1.selected_staff.getPhone = txtPhone.Text.Trim Or ValidateStaffPhoneN0(ErrorProvider1, txtPhone)) And
-               (staff1.selected_staff.getEmail = txtEmail.Text.Trim Or ValidateEmail(ErrorProvider1, txtEmail))) Then
+        ValidateComboBox(ErrorProvider1, cmbPosition) And
+        ValidateComboBox(ErrorProvider1, cmbGender) And
+        ValidateText(ErrorProvider1, txtFullname)) Then
             Exit Sub
         End If
 
@@ -46,26 +44,26 @@
             keystaffs.Add(key_staff)
         Next
 
-        If keystaffs.Count > 0 Then
-            If updateStaff(staff) Then ' And deleteKeyStaff(staff) And addKeyStaff(keystaffs) Then
-                staff1.UpdateRecord(staff1.selected_item, staff)
-                message = "Update Successful"
-                ShowMessage(staff1.Timer1, staff1.lblMsg, Color.LimeGreen, message)
-                Reset()
-                Me.Close()
-            Else
-                message = "Update failed"
-                ShowMessage(staff1.Timer1, staff1.lblMsg, Color.Red, message)
-            End If
-        Else
+        If keystaffs.Count = 0 Then
             message = "Atleast 1 key must be selected"
-        ShowMessage(Timer1, lblMsg, Color.Red, message)
+            ShowMessage(Timer1, lblMsg, Color.Red, message)
+            Exit Sub
+        End If
+
+        If updateStaff(staff) And deleteKeyStaff(staff) And addKeyStaff(keystaffs) Then
+            staff1.UpdateRecord(staff1.selected_item, staff)
+            message = "Update Successful"
+            ShowMessage(staff1.Timer1, staff1.lblMsg, Color.LimeGreen, message)
+            Me.Close()
+        Else
+            message = "Update failed"
+            ShowMessage(Timer1, lblMsg, Color.Red, message)
         End If
 
     End Sub
 
     Private Sub StaffUpdateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Reset()
 
         With staff1.selected_staff
             txtStaffRef.Text = .getRef
@@ -77,12 +75,6 @@
             cmbDepartment.Text = .getDepartment
             cmbGender.Text = .getGender
             cmbPosition.Text = .getPosition
-            ComboBox1.SelectedIndex = 0
-            For Each key In getAllKey()
-                If Not ListKeys.Items.Contains(key.getLock) Then
-                    ListKeys.Items.Add(key.getLock)
-                End If
-            Next
             For Each key_staff In getAllKeyStaffByStaffId(.getId)
                 ListKeys.SetItemCheckState(ListKeys.Items.IndexOf(getKeyById(key_staff.getKeyId).getLock), CheckState.Checked)
             Next
@@ -121,15 +113,15 @@
     End Sub
 
     Private Sub txtStaffRef_Leave(sender As Object, e As EventArgs) Handles txtStaffRef.Leave
-        If Not (staff1.selected_staff.getRef = txtStaffRef.Text.Trim) Then ValidateStaffRef(ErrorProvider1, txtStaffRef)
+        If Not (staff1.selected_staff.getRef.ToLower = txtStaffRef.Text.Trim.ToLower) Then ValidateStaffRef(ErrorProvider1, txtStaffRef)
     End Sub
 
     Private Sub txtPhone_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
-        If Not (staff1.selected_staff.getPhone = txtPhone.Text.Trim) Then ValidateStaffPhoneN0(ErrorProvider1, txtPhone)
+        If Not (staff1.selected_staff.getPhone.ToLower = txtPhone.Text.Trim.ToLower) Then ValidateStaffPhoneN0(ErrorProvider1, txtPhone)
     End Sub
 
     Private Sub txtEmail_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
-        If Not (staff1.selected_staff.getEmail = txtEmail.Text.Trim) Then ValidateEmail(ErrorProvider1, txtEmail)
+        If Not (staff1.selected_staff.getEmail.ToLower = txtEmail.Text.Trim.ToLower) Then ValidateEmail(ErrorProvider1, txtEmail)
     End Sub
 
     Private Sub Edit_Staff_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -161,6 +153,7 @@
         For Each itm In ListKeys.CheckedIndices
             ListKeys.SetItemChecked(itm, False)
         Next
+        ListKeys.ClearSelected()
         cmbDepartment.Focus()
     End Sub
 End Class
