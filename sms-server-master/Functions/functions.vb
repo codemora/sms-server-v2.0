@@ -72,7 +72,7 @@
     '
     'Returns the number of display records
     '
-    Public Function numberOfDisplayedRecords(listview As ListView) As String
+    Public Function numOfRecs(listview As ListView) As String
         Return listview.Items.Count.ToString + " Records"
     End Function
 
@@ -95,14 +95,21 @@
     '
     Public Function getDisplayName(name As String) As String
 
-        If name.Trim = "" Then Return name
-        Dim firstname As String
+        Dim display_name As String = "Buddy"
+        If name.Trim = "" Then Return display_name
         If name.IndexOf(" ") = -1 Then
-            firstname = name.Substring(0)
+            display_name = name.Substring(0)
         Else
-            firstname = name.Substring(0, name.IndexOf(" "))
+            Dim names = name.Split(" ")
+
+            For Each item In names
+                If Not item.Contains(".") Then
+                    display_name = item
+                    Exit For
+                End If
+            Next
         End If
-        Return firstname.Substring(0, 1).ToUpper + firstname.Substring(1).ToLower
+        Return display_name.Substring(0, 1).ToUpper + display_name.Substring(1).ToLower
 
     End Function
 End Module

@@ -84,7 +84,7 @@ Partial Class View_Key
         Me.lblQuantity.BackColor = System.Drawing.Color.Transparent
         Me.lblQuantity.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQuantity.ForeColor = System.Drawing.Color.Silver
-        Me.lblQuantity.Location = New System.Drawing.Point(15, 85)
+        Me.lblQuantity.Location = New System.Drawing.Point(15, 82)
         Me.lblQuantity.MaximumSize = New System.Drawing.Size(380, 21)
         Me.lblQuantity.Name = "lblQuantity"
         Me.lblQuantity.Size = New System.Drawing.Size(97, 21)
@@ -98,7 +98,7 @@ Partial Class View_Key
         Me.lblActive.BackColor = System.Drawing.Color.Red
         Me.lblActive.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblActive.ForeColor = System.Drawing.Color.White
-        Me.lblActive.Location = New System.Drawing.Point(15, 131)
+        Me.lblActive.Location = New System.Drawing.Point(15, 128)
         Me.lblActive.Name = "lblActive"
         Me.lblActive.Size = New System.Drawing.Size(41, 21)
         Me.lblActive.TabIndex = 116
@@ -111,7 +111,7 @@ Partial Class View_Key
         Me.lblType.BackColor = System.Drawing.Color.Transparent
         Me.lblType.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblType.ForeColor = System.Drawing.Color.Silver
-        Me.lblType.Location = New System.Drawing.Point(15, 108)
+        Me.lblType.Location = New System.Drawing.Point(15, 105)
         Me.lblType.MaximumSize = New System.Drawing.Size(380, 21)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(137, 21)
@@ -124,7 +124,7 @@ Partial Class View_Key
         Me.lblLocation.AutoSize = True
         Me.lblLocation.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLocation.ForeColor = System.Drawing.Color.Silver
-        Me.lblLocation.Location = New System.Drawing.Point(15, 62)
+        Me.lblLocation.Location = New System.Drawing.Point(15, 59)
         Me.lblLocation.MaximumSize = New System.Drawing.Size(380, 21)
         Me.lblLocation.Name = "lblLocation"
         Me.lblLocation.Size = New System.Drawing.Size(108, 21)
@@ -138,7 +138,7 @@ Partial Class View_Key
         Me.lblBlock.BackColor = System.Drawing.Color.Transparent
         Me.lblBlock.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock.ForeColor = System.Drawing.Color.Silver
-        Me.lblBlock.Location = New System.Drawing.Point(15, 39)
+        Me.lblBlock.Location = New System.Drawing.Point(15, 36)
         Me.lblBlock.MaximumSize = New System.Drawing.Size(380, 21)
         Me.lblBlock.Name = "lblBlock"
         Me.lblBlock.Size = New System.Drawing.Size(124, 21)
@@ -151,14 +151,14 @@ Partial Class View_Key
         Me.lblTag.AutoEllipsis = True
         Me.lblTag.AutoSize = True
         Me.lblTag.BackColor = System.Drawing.Color.Transparent
-        Me.lblTag.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTag.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTag.ForeColor = System.Drawing.Color.White
         Me.lblTag.Location = New System.Drawing.Point(15, 9)
         Me.lblTag.MaximumSize = New System.Drawing.Size(380, 28)
         Me.lblTag.Name = "lblTag"
-        Me.lblTag.Size = New System.Drawing.Size(118, 28)
+        Me.lblTag.Size = New System.Drawing.Size(116, 25)
         Me.lblTag.TabIndex = 102
-        Me.lblTag.Text = "Fullname"
+        Me.lblTag.Text = "Tag [Lock]"
         Me.lblTag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label7

@@ -41,9 +41,10 @@
             .SubItems.Add(staff.getEmail)
             .SubItems.Add(staff.getCreatedAt)
             .SubItems.Add(staff.getUpdatedAt)
-            If Not staff.getIsActive Then .BackColor = Color.OrangeRed : .ForeColor = Color.White
+            If Not staff.getIsActive Then .BackColor = Color.Red : .ForeColor = Color.White
         End With
         lvData.Items.Add(newItem)
+
     End Sub
 
     '
@@ -63,7 +64,7 @@
             .SubItems.Add(staff.getEmail)
             .SubItems.Add(staff.getCreatedAt)
             .SubItems.Add(staff.getUpdatedAt)
-            If Not staff.getIsActive Then .BackColor = Color.OrangeRed : .ForeColor = Color.White
+            If Not staff.getIsActive Then .BackColor = Color.Red : .ForeColor = Color.White
         End With
         lvData.Items.Insert(lvData.Items.IndexOf(item), newItem)
         lvData.Items.Remove(item)
@@ -72,7 +73,7 @@
     '
     'Returns number of records on display in ListView
     '
-    Private Function NumOfRecs() As String
+    Public Function NumOfRecs() As String
         Return lvData.Items.Count.ToString + " Records"
     End Function
 

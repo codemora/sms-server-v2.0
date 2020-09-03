@@ -19,7 +19,7 @@
         If Not (txtTag.Text.Trim.ToLower = keys1.selected_key.getTag.ToLower) Then If Not ValidateKeyTag(ErrorProvider1, txtTag) Then Exit Sub
         If Not (txtLock.Text.Trim.ToLower = keys1.selected_key.getLock.ToLower) Then If Not ValidateLock(ErrorProvider1, txtLock) Then Exit Sub
         If Not (ValidateComboBox(ErrorProvider1, cmbKeyType) And
-        ValidateComboBox(ErrorProvider1, cmbBlock) And
+        ValidateKeyBlock(ErrorProvider1, cmbBlock) And
         ValidateText(ErrorProvider1, txtLocation)) Then
             Exit Sub
         End If
@@ -44,7 +44,7 @@
     End Sub
 
     Private Sub cmbBlock_Leave(sender As Object, e As EventArgs) Handles cmbKeyType.Leave, cmbBlock.Leave
-        ValidateComboBox(ErrorProvider1, sender)
+        ValidateKeyBlock(ErrorProvider1, sender)
     End Sub
 
     Private Sub txtLock_Leave(sender As Object, e As EventArgs) Handles txtLock.Leave
@@ -68,5 +68,15 @@
         txtLocation.Clear()
         ErrorProvider1.Clear()
         txtTag.Focus()
+    End Sub
+
+    Private Sub cmbKeyType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKeyType.SelectedIndexChanged
+        If cmbKeyType.SelectedItem.ToString.ToLower = "car" Then
+            cmbBlock.SelectedIndex = -1
+            cmbBlock.Enabled = False
+        Else
+            cmbBlock.Enabled = True
+            cmbBlock.SelectedIndex = 0
+        End If
     End Sub
 End Class

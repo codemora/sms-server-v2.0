@@ -1,5 +1,5 @@
 ﻿Public Class Add_Key
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
         'ControlPaint.DrawBorder(e.Graphics, Panel1.DisplayRectangle, Color.LightBlue, ButtonBorderStyle.Solid)
     End Sub
 
@@ -27,7 +27,7 @@
         If Not (ValidateKeyTag(ErrorProvider1, txtTag) And
                 ValidateComboBox(ErrorProvider1, cmbKeyType) And
                 ValidateLock(ErrorProvider1, txtLock) And
-                ValidateComboBox(ErrorProvider1, cmbBlock) And
+                ValidateKeyBlock(ErrorProvider1, cmbBlock) And
                 ValidateText(ErrorProvider1, txtLocation)) Then
             Exit Sub
         End If
@@ -39,6 +39,7 @@
             ShowMessage(Timer1, lblMsg, Color.FromArgb(36, 118, 46), message)
             keys1.showLoader()
             keys1.addItem(getKeyByTag(key.getTag))
+            keys1.lblCount.Text = keys1.NumOfRecs()
             keys1.hideLoader()
             Reset()
             Exit Sub
@@ -53,22 +54,32 @@
     End Sub
 
     Private Sub txtTag_Leave(sender As Object, e As EventArgs) Handles txtTag.Leave
-        ValidateKeyTag(ErrorProvider1, sender)
+        ValidateKeyTag(ErrorProvider1, txtTag)
     End Sub
 
-    Private Sub cmbBlock_Leave(sender As Object, e As EventArgs) Handles cmbKeyType.Leave, cmbBlock.Leave
-        ValidateComboBox(ErrorProvider1, sender)
+    Private Sub cmbBlock_Leave(sender As Object, e As EventArgs) Handles cmbBlock.Leave
+        ValidateKeyBlock(ErrorProvider1, cmbBlock)
     End Sub
 
     Private Sub txtLock_Leave(sender As Object, e As EventArgs) Handles txtLock.Leave
-        ValidateLock(ErrorProvider1, sender)
+        ValidateLock(ErrorProvider1, txtLock)
     End Sub
 
     Private Sub txtLocation_Leave(sender As Object, e As EventArgs) Handles txtLocation.Leave
-        ValidateText(ErrorProvider1, sender)
+        ValidateText(ErrorProvider1, txtLocation)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         CloseMessage(sender, lblMsg)
+    End Sub
+
+    Private Sub cmbKeyType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKeyType.SelectedIndexChanged
+        If cmbKeyType.SelectedItem.ToString.ToLower = "car" Then
+            cmbBlock.SelectedIndex = -1
+            cmbBlock.Enabled = False
+        Else
+            cmbBlock.Enabled = True
+            cmbBlock.SelectedIndex = 0
+        End If
     End Sub
 End Class

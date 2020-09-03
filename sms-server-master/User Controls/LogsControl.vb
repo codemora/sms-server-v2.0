@@ -11,29 +11,6 @@
         Next
         hideLoader()
     End Sub
-    'Private Sub fillListView(data As List(Of Requestlog))
-    '    showLoader()
-    '    lvData.Items.Clear()
-    '    Dim items As New List(Of ListViewItem)
-    '    For Each request In data
-    '        Dim item As New ListViewItem
-    '        With item
-    '            .Text = request.getId
-    '            .SubItems.Add(request.getStaffRef)
-    '            .SubItems.Add(request.getKeys)
-    '            .SubItems.Add(request.getAction)
-    '            .SubItems.Add(request.getStatus)
-    '            .SubItems.Add(request.getUsername)
-    '            .SubItems.Add(request.getCreatedAt)
-    '        End With
-    '        items.Add(item)
-    '    Next
-    '    lvData.BeginUpdate()
-    '    lvData.Items.AddRange(items.ToArray())
-    '    lvData.EndUpdate()
-    '    hideLoader()
-    'End Sub
-
 
     '
     'Add Request to log
@@ -92,7 +69,7 @@
     '
     'Returns number of records on display in ListView
     '
-    Private Function NumOfRecs() As String
+    Public Function NumOfRecs() As String
         Return lvData.Items.Count.ToString + " Records"
     End Function
 

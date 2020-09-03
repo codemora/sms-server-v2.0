@@ -56,18 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property SMSConnectionString() As String
-            Get
-                Return CType(Me("SMSConnectionString"),String)
-            End Get
-            Set
-                Me("SMSConnectionString") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Emmanuel")>  _
         Public Property DISPLAY_NAME() As String
             Get
@@ -123,6 +111,18 @@ Namespace My
             End Get
             Set
                 Me("DISPLAY_IMAGE") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SMSConnectionString() As String
+            Get
+                Return CType(Me("SMSConnectionString"),String)
+            End Get
+            Set
+                Me("SMSConnectionString") = value
             End Set
         End Property
     End Class

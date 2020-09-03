@@ -23,7 +23,8 @@ Partial Class Add_Key
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblMsg = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,27 +43,19 @@ Partial Class Add_Key
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'ErrorProvider1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.btnReset)
-        Me.Panel1.Controls.Add(Me.btnSave)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(420, 455)
-        Me.Panel1.TabIndex = 9
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 3000
         '
         'Panel2
         '
@@ -80,10 +73,10 @@ Partial Class Add_Key
         Me.Panel2.Controls.Add(Me.cmbBlock)
         Me.Panel2.Controls.Add(Me.cmbKeyType)
         Me.Panel2.Controls.Add(Me.txtTag)
-        Me.Panel2.Location = New System.Drawing.Point(26, 62)
+        Me.Panel2.Location = New System.Drawing.Point(27, 67)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(366, 318)
-        Me.Panel2.TabIndex = 8
+        Me.Panel2.TabIndex = 35
         '
         'lblMsg
         '
@@ -124,7 +117,7 @@ Partial Class Add_Key
         '
         Me.NumericUpDown1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NumericUpDown1.Location = New System.Drawing.Point(108, 246)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.ReadOnly = True
@@ -217,7 +210,7 @@ Partial Class Add_Key
         Me.cmbKeyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbKeyType.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKeyType.FormattingEnabled = True
-        Me.cmbKeyType.Items.AddRange(New Object() {"-----Select Key Type-----", "Entrance", "Laboratory", "Storage", "Office", "Washroom", "Others"})
+        Me.cmbKeyType.Items.AddRange(New Object() {"-----Select Key Type-----", "Auditorium", "Cafeteria", "Car", "Classroom", "Clinic", "Entrance", "Laboratory", "Library", "Storage", "Office", "Tank", "Washroom", "Others"})
         Me.cmbKeyType.Location = New System.Drawing.Point(108, 70)
         Me.cmbKeyType.Name = "cmbKeyType"
         Me.cmbKeyType.Size = New System.Drawing.Size(230, 29)
@@ -225,7 +218,6 @@ Partial Class Add_Key
         '
         'txtTag
         '
-        Me.txtTag.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTag.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTag.Location = New System.Drawing.Point(108, 26)
         Me.txtTag.Multiline = True
@@ -238,10 +230,10 @@ Partial Class Add_Key
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(49, 270)
+        Me.Label7.Location = New System.Drawing.Point(50, 275)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(76, 29)
-        Me.Label7.TabIndex = 32
+        Me.Label7.TabIndex = 37
         Me.Label7.Text = "Location"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -251,10 +243,10 @@ Partial Class Add_Key
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(105, 17)
+        Me.Label6.Location = New System.Drawing.Point(106, 22)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(208, 32)
-        Me.Label6.TabIndex = 31
+        Me.Label6.TabIndex = 36
         Me.Label6.Text = "ADD KEY DETAILS"
         '
         'btnReset
@@ -265,10 +257,10 @@ Partial Class Add_Key
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnReset.Location = New System.Drawing.Point(222, 390)
+        Me.btnReset.Location = New System.Drawing.Point(223, 395)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(98, 37)
-        Me.btnReset.TabIndex = 7
+        Me.btnReset.TabIndex = 34
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
@@ -280,29 +272,24 @@ Partial Class Add_Key
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnSave.Location = New System.Drawing.Point(107, 390)
+        Me.btnSave.Location = New System.Drawing.Point(108, 395)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(98, 37)
-        Me.btnSave.TabIndex = 6
+        Me.btnSave.TabIndex = 33
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 3000
-        '
         'Add_Key
         '
-        Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SeaGreen
         Me.ClientSize = New System.Drawing.Size(420, 455)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.btnSave)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -310,19 +297,30 @@ Partial Class Add_Key
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Add Key"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Timer1 As Timer
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblMsg As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents txtLocation As TextBox
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
@@ -337,17 +335,4 @@ Partial Class Add_Key
     Friend WithEvents Label6 As Label
     Friend WithEvents btnReset As Button
     Friend WithEvents btnSave As Button
-    Friend WithEvents txtLocation As TextBox
-    Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents lblMsg As Label
-    Friend WithEvents Timer1 As Timer
-
-    Public Sub New()
-
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-
-    End Sub
 End Class

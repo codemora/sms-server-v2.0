@@ -56,7 +56,7 @@
     '
     'Returns number of records on display in ListView
     '
-    Private Function NumOfRecs() As String
+    Public Function NumOfRecs() As String
         Return lvData.Items.Count.ToString + " Records"
     End Function
 

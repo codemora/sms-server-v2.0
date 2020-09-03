@@ -122,7 +122,7 @@ Partial Class Edit_Key
         '
         Me.NumericUpDown1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NumericUpDown1.Location = New System.Drawing.Point(108, 246)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.ReadOnly = True
@@ -215,7 +215,7 @@ Partial Class Edit_Key
         Me.cmbKeyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbKeyType.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKeyType.FormattingEnabled = True
-        Me.cmbKeyType.Items.AddRange(New Object() {"-----Select Key Type-----", "Entrance", "Laboratory", "Storage", "Office", "Washroom", "Others"})
+        Me.cmbKeyType.Items.AddRange(New Object() {"-----Select Key Type-----", "Auditorium", "Cafeteria", "Car", "Classroom", "Clinic", "Entrance", "Laboratory", "Library", "Storage", "Office", "Tank", "Washroom", "Others"})
         Me.cmbKeyType.Location = New System.Drawing.Point(108, 70)
         Me.cmbKeyType.Name = "cmbKeyType"
         Me.cmbKeyType.Size = New System.Drawing.Size(230, 29)
@@ -223,7 +223,6 @@ Partial Class Edit_Key
         '
         'txtTag
         '
-        Me.txtTag.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTag.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTag.Location = New System.Drawing.Point(108, 26)
         Me.txtTag.Multiline = True

@@ -32,7 +32,7 @@
         If getAllRequestlogByStatus("pending").Count = 0 Then
             lvData.Items.Clear()
             lvData.GridLines = False
-            lblCount.Text = numberOfDisplayedRecords(lvData)
+            lblCount.Text = numOfRecs(lvData)
             Dashboard.showNoRecordDisplay()
         Else
             If Dashboard.no_record_found Then Dashboard.hideNoRecordDisplay()
@@ -44,7 +44,7 @@
                 fillListView(getAllRequestlogByStatus("pending", lvData.Items.Count))
             End If
             lvData.GridLines = True
-            lblCount.Text = numberOfDisplayedRecords(lvData)
+            lblCount.Text = numOfRecs(lvData)
         End If
         Dashboard.hideLoader()
 

@@ -66,26 +66,27 @@ Public Class Add_Staff
         End If
 
         If addStaff(staff) Then
-                staff = getStaffByRef(staff.getRef)
-                'Creates a list of keys the staff can have access to
-                Dim staffkeys As New List(Of KeyStaff)
-                For Each key In ListKeys.CheckedItems
-                    Dim keys As New KeyStaff(0, staff.getId, getKeyId(key), False, Now, Now)
-                    staffkeys.Add(keys)
-                Next
-                addKeyStaff(staffkeys)
-                staff1.showLoader()
-                staff1.addItem(staff)
-                staff1.hideLoader()
-                message = "Registration Successful"
-                ShowMessage(Timer1, lblMsg, Color.LimeGreen, message)
-                Reset()
-                Exit Sub
-            Else
-                message = "Registration failed"
-                ShowMessage(Timer1, lblMsg, Color.Red, message)
-                Exit Sub
-            End If
+            staff = getStaffByRef(staff.getRef)
+            'Creates a list of keys the staff can have access to
+            Dim staffkeys As New List(Of KeyStaff)
+            For Each key In ListKeys.CheckedItems
+                Dim keys As New KeyStaff(0, staff.getId, getKeyId(key), False, Now, Now)
+                staffkeys.Add(keys)
+            Next
+            addKeyStaff(staffkeys)
+            staff1.showLoader()
+            staff1.addItem(staff)
+            staff1.lblCount.Text = staff1.NumOfRecs()
+            staff1.hideLoader()
+            message = "Registration Successful"
+            ShowMessage(Timer1, lblMsg, Color.LimeGreen, message)
+            Reset()
+            Exit Sub
+        Else
+            message = "Registration failed"
+            ShowMessage(Timer1, lblMsg, Color.Red, message)
+            Exit Sub
+        End If
 
     End Sub
 

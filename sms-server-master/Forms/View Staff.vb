@@ -22,7 +22,7 @@
             Dim key As Key
             For Each itm In getAllKeyStaffByStaffId(.getId)
                 key = getKeyById(itm.getKeyId)
-                lboxKeysAccessible.Items.Add(key.getTag + " (" + key.getLock + ")")
+                lboxKeysAccessible.Items.Add(key.getTag + " [" + key.getLock + "]")
             Next
         End With
     End Sub

@@ -84,7 +84,7 @@ Partial Class View_User
         Me.lblActive.BackColor = System.Drawing.Color.Red
         Me.lblActive.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblActive.ForeColor = System.Drawing.Color.White
-        Me.lblActive.Location = New System.Drawing.Point(160, 136)
+        Me.lblActive.Location = New System.Drawing.Point(160, 133)
         Me.lblActive.Name = "lblActive"
         Me.lblActive.Size = New System.Drawing.Size(112, 21)
         Me.lblActive.TabIndex = 116
@@ -107,7 +107,7 @@ Partial Class View_User
         Me.lblPhone.BackColor = System.Drawing.Color.Transparent
         Me.lblPhone.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPhone.ForeColor = System.Drawing.Color.Silver
-        Me.lblPhone.Location = New System.Drawing.Point(160, 110)
+        Me.lblPhone.Location = New System.Drawing.Point(160, 107)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(100, 21)
         Me.lblPhone.TabIndex = 107
@@ -119,7 +119,7 @@ Partial Class View_User
         Me.lblPrivilege.AutoSize = True
         Me.lblPrivilege.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrivilege.ForeColor = System.Drawing.Color.Silver
-        Me.lblPrivilege.Location = New System.Drawing.Point(160, 84)
+        Me.lblPrivilege.Location = New System.Drawing.Point(160, 81)
         Me.lblPrivilege.Name = "lblPrivilege"
         Me.lblPrivilege.Size = New System.Drawing.Size(62, 21)
         Me.lblPrivilege.TabIndex = 106
@@ -132,7 +132,7 @@ Partial Class View_User
         Me.lblUsername.BackColor = System.Drawing.Color.Transparent
         Me.lblUsername.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.Silver
-        Me.lblUsername.Location = New System.Drawing.Point(160, 58)
+        Me.lblUsername.Location = New System.Drawing.Point(160, 55)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(59, 21)
         Me.lblUsername.TabIndex = 104
@@ -144,12 +144,12 @@ Partial Class View_User
         Me.lblFullname.AutoEllipsis = True
         Me.lblFullname.AutoSize = True
         Me.lblFullname.BackColor = System.Drawing.Color.Transparent
-        Me.lblFullname.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFullname.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFullname.ForeColor = System.Drawing.Color.White
         Me.lblFullname.Location = New System.Drawing.Point(160, 25)
         Me.lblFullname.MaximumSize = New System.Drawing.Size(300, 28)
         Me.lblFullname.Name = "lblFullname"
-        Me.lblFullname.Size = New System.Drawing.Size(118, 28)
+        Me.lblFullname.Size = New System.Drawing.Size(105, 25)
         Me.lblFullname.TabIndex = 102
         Me.lblFullname.Text = "Fullname"
         Me.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

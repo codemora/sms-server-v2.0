@@ -15,6 +15,7 @@
         If addUser(user) Then
             users1.showLoader()
             users1.addItem(getUserByUsername(user.getUsername))
+            users1.lblCount.Text = users1.NumOfRecs()
             users1.hideLoader()
             message = "Registration Successful"
             ShowMessage(Timer1, lblMsg, Color.LimeGreen, message)

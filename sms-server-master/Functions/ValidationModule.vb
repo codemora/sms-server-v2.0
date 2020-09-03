@@ -4,20 +4,39 @@ Module ValidationModule
     'VALIDATION FUNCTIONS
     '
 
-    Public Function ValidatePassword(errorProvider As ErrorProvider, txtbox As TextBox, message As String, searchBox As MaskedTextBox) As Boolean
+    'Public Function ValidatePassword(errorProvider As ErrorProvider, txtbox As TextBox, message As String, searchBox As MaskedTextBox) As Boolean
+    '    Dim pattern As String = "^.*(?=.{5,16}).*$"
+    '    Dim password As New Regex(pattern) 'Attach Pattern To name Textbox
+
+    '    'Not A Match
+    '    If searchBox.Focused Then
+    '        errorProvider.SetError(txtbox, "")
+    '        Return False
+    '    ElseIf txtbox.Text = "" Then
+    '        errorProvider.SetError(txtbox, "Please the field must not be empty")
+    '        Beep()
+    '        Return False
+    '    ElseIf Not password.IsMatch(txtbox.Text.Trim) Then
+    '        errorProvider.SetError(txtbox, message)
+    '        Beep()
+    '        Return False
+    '    Else
+    '        errorProvider.SetError(txtbox, "")
+    '        Return True
+    '    End If
+    'End Function
+
+    Public Function ValidatePassword(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
         Dim pattern As String = "^.*(?=.{5,16}).*$"
         Dim password As New Regex(pattern) 'Attach Pattern To name Textbox
 
         'Not A Match
-        If searchBox.Focused Then
-            errorProvider.SetError(txtbox, "")
-            Return False
-        ElseIf txtbox.Text = "" Then
+        If txtbox.Text = "" Then
             errorProvider.SetError(txtbox, "Please the field must not be empty")
             Beep()
             Return False
         ElseIf Not password.IsMatch(txtbox.Text.Trim) Then
-            errorProvider.SetError(txtbox, message)
+            errorProvider.SetError(txtbox, "Invalid Password! Password should be between 5 to 16 characters")
             Beep()
             Return False
         Else
@@ -26,16 +45,13 @@ Module ValidationModule
         End If
     End Function
 
-    Public Function ValidateConfirmPassword(errorProvider As ErrorProvider, txtbox As TextBox, txtbox1 As TextBox, message As String, searchBox As MaskedTextBox) As Boolean
-        If searchBox.Focused Then
-            errorProvider.SetError(txtbox, "")
-            Return False
-        ElseIf txtbox.Text = "" Then
+    Public Function ValidateConfirmPassword(errorProvider As ErrorProvider, txtbox As TextBox, txtbox1 As TextBox) As Boolean
+        If txtbox.Text = "" Then
             errorProvider.SetError(txtbox, "Please the field must not be empty")
             Beep()
             Return False
         ElseIf txtbox.Text.Trim <> txtbox1.Text.Trim Then
-            errorProvider.SetError(txtbox, message)
+            errorProvider.SetError(txtbox, "Password does not match")
             Beep()
             Return False
         Else
@@ -142,6 +158,19 @@ Module ValidationModule
         End If
     End Function
 
+    Public Function ValidateKeyBlock(errorProvider As ErrorProvider, cmbBox As ComboBox) As Boolean
+        If cmbBox.Text = "" Then
+            errorProvider.SetError(cmbBox, "")
+            Return True
+        ElseIf cmbBox.SelectedIndex = 0 Then
+            errorProvider.SetError(cmbBox, "Select an option")
+            Beep()
+            Return False
+        Else
+            errorProvider.SetError(cmbBox, "")
+            Return True
+        End If
+    End Function
 
     Public Function ValidateEmail(errorProvider As ErrorProvider, txtbox As TextBox) As Boolean
 
@@ -375,46 +404,6 @@ Module ValidationModule
         End If
     End Function
 
-    'Public Function ValidateRoomN0(errorProvider As ErrorProvider, txtbox As MaskedTextBox, gender As String, numPerRoom As Integer, searchBox As MaskedTextBox) As Boolean
-    '    If searchBox.Focused Then
-    '        errorProvider.SetError(txtbox, "")
-    '        Return False
-
-    '    ElseIf txtbox.Text = "" Then
-    '        errorProvider.SetError(txtbox, "Field should not be empty")
-    '        Beep()
-    '        Return False
-    '    ElseIf student.original_room = txtbox.Text.Trim Then
-    '        errorProvider.SetError(txtbox, "")
-    '        Return True
-    '    ElseIf txtbox.Text.Length > 3 Or IsNumeric(txtbox.Text) Then
-    '        errorProvider.SetError(txtbox, "Invalid Room Number")
-    '        Beep()
-    '        Return False
-    '    ElseIf Form3.btnUpdate.Enabled = True And student.original_room = Form3.txtRoom.Text.Trim Then
-    '        errorProvider.SetError(txtbox, "")
-    '        Return True
-    '    ElseIf Not student.Room.IsExist(txtbox.Text) Then
-    '        errorProvider.SetError(txtbox, "Room does not exist")
-    '        Beep()
-    '        Return False
-    '    ElseIf student.Room.IsFull() Then
-    '        errorProvider.SetError(txtbox, "Room is full")
-    '        Beep()
-    '        Return False
-    '    ElseIf Not student.Room.GenderAccept(gender) Then
-    '        errorProvider.SetError(txtbox, "Room can not accept this gender")
-    '        Beep()
-    '        Return False
-    '    ElseIf Not student.Room.NumberPerRoom(numPerRoom) Then
-    '        errorProvider.SetError(txtbox, "Invalid Number Per Room")
-    '        Beep()
-    '        Return False
-    '    Else
-    '        errorProvider.SetError(txtbox, "")
-    '        Return True
-    '    End If
-    'End Function
 
     ''
     ''show message

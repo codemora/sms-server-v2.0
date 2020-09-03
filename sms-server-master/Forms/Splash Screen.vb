@@ -4,6 +4,8 @@ Public Class Splash_Screen
         RectangleShape2.Width += 2
         If RectangleShape2.Width = 400 Then
             Timer1.Stop()
+            'Log_In.Show()
+            'Me.Close()
         End If
     End Sub
 
@@ -40,6 +42,7 @@ Public Class Splash_Screen
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         NewConString(GetServer)
         blockAllExpiredStaff()
+
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted

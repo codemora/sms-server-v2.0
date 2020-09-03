@@ -10,7 +10,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DepartmentTTableAdapter" GeneratorDataComponentClassName="DepartmentTTableAdapter" Name="DepartmentT" UserDataComponentName="DepartmentTTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.DepartmentT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DepartmentT] WHERE (([DeptID] = @Original_DeptID) AND ([DeptName] = @Original_DeptName))</CommandText>
@@ -65,7 +65,7 @@ WHERE        (DeptID = @Original_DeptID)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.DepartmentT" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT DeptID, DeptName FROM dbo.DepartmentT
@@ -76,7 +76,7 @@ where DeptID = @DeptID </CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.DepartmentT" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="GetDataByName">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="GetDataByName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        DeptID, DeptName
@@ -105,7 +105,7 @@ WHERE        (DeptID = @Original_DeptID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LocationTTableAdapter" GeneratorDataComponentClassName="LocationTTableAdapter" Name="LocationT" UserDataComponentName="LocationTTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.LocationT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[LocationT] WHERE (([LocationID] = @Original_LocationID) AND ([LocationName] = @Original_LocationName))</CommandText>
@@ -160,7 +160,7 @@ WHERE        (LocationID = @Original_LocationID)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.LocationT" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        LocationID, LocationName
@@ -172,7 +172,7 @@ WHERE        (LocationID = @LocationID)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="dbo.LocationT" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="GetDataByName">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="GetDataByName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        LocationID, LocationName
@@ -202,7 +202,7 @@ WHERE        (LocationID = @Original_LocationID);
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="keysTableAdapter" GeneratorDataComponentClassName="keysTableAdapter" Name="keys" UserDataComponentName="keysTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[keys] WHERE (([id] = @Original_id) AND ([tag] = @Original_tag) AND ([type] = @Original_type) AND ([lock] = @Original_lock) AND ([block] = @Original_block) AND ([location] = @Original_location) AND ([quantity] = @Original_quantity) AND ([status] = @Original_status) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)))</CommandText>
@@ -290,7 +290,7 @@ SELECT id, tag, type, lock, block, location, quantity, status, created_at, updat
               <Mapping SourceColumn="updated_at" DataSetColumn="updated_at" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBlock" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByBlock" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBlock" UserSourceName="FillBy">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBlock" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByBlock" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBlock" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -302,7 +302,7 @@ WHERE        (block = @block)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -314,7 +314,7 @@ WHERE        (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdWhereIn" GetMethodModifier="Public" GetMethodName="GetDataByIdWhereIn" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdWhereIn" UserSourceName="GetDataByIdWhereIn">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdWhereIn" GetMethodModifier="Public" GetMethodName="GetDataByIdWhereIn" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdWhereIn" UserSourceName="GetDataByIdWhereIn">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -326,7 +326,7 @@ WHERE        (id = @id) AND (status = 'In')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdWhereOut" GetMethodModifier="Public" GetMethodName="GetDataByIdWhereOut" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdWhereOut" UserSourceName="GetDataByIdWhereOut">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdWhereOut" GetMethodModifier="Public" GetMethodName="GetDataByIdWhereOut" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdWhereOut" UserSourceName="GetDataByIdWhereOut">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -338,7 +338,7 @@ WHERE        (id = @id) AND (status = 'Out')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocation" GetMethodModifier="Public" GetMethodName="GetDataByLocation" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocation" UserSourceName="GetDataByLocation">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocation" GetMethodModifier="Public" GetMethodName="GetDataByLocation" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocation" UserSourceName="GetDataByLocation">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -350,7 +350,7 @@ WHERE        (location = @location)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLock" GetMethodModifier="Public" GetMethodName="GetDataByLock" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLock" UserSourceName="GetDataByLock">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLock" GetMethodModifier="Public" GetMethodName="GetDataByLock" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLock" UserSourceName="GetDataByLock">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -362,7 +362,7 @@ WHERE        (lock = @lock)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -374,7 +374,7 @@ WHERE        ({ fn CONCAT(tag, { fn CONCAT(type, { fn CONCAT(lock, { fn CONCAT(b
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTag" GetMethodModifier="Public" GetMethodName="GetDataByTag" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTag" UserSourceName="GetDataByTag">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.keys" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTag" GetMethodModifier="Public" GetMethodName="GetDataByTag" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTag" UserSourceName="GetDataByTag">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, tag, type, lock, block, location, quantity, status, created_at, updated_at
@@ -412,7 +412,7 @@ SELECT id, tag, type, lock, block, location, quantity, status, created_at, updat
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="staffsTableAdapter" GeneratorDataComponentClassName="staffsTableAdapter" Name="staffs" UserDataComponentName="staffsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [staffs] WHERE (([id] = @Original_id) AND ([ref] = @Original_ref) AND ([fullname] = @Original_fullname) AND ([gender] = @Original_gender) AND ([department] = @Original_department) AND ([position] = @Original_position) AND ((@IsNull_pass_code = 1 AND [pass_code] IS NULL) OR ([pass_code] = @Original_pass_code)) AND ([phone] = @Original_phone) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_security_question = 1 AND [security_question] IS NULL) OR ([security_question] = @Original_security_question)) AND ((@IsNull_security_answer = 1 AND [security_answer] IS NULL) OR ([security_answer] = @Original_security_answer)) AND ([is_active] = @Original_is_active) AND ((@IsNull_deleted_at = 1 AND [deleted_at] IS NULL) OR ([deleted_at] = @Original_deleted_at)) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)))</CommandText>
@@ -541,7 +541,7 @@ SELECT id, ref, fullname, gender, department, position, pass_code, phone, email,
               <Mapping SourceColumn="email" DataSetColumn="email" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDeleted" GetMethodModifier="Public" GetMethodName="GetDataByDeleted" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDeleted" UserSourceName="GetDataByDeleted">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDeleted" GetMethodModifier="Public" GetMethodName="GetDataByDeleted" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDeleted" UserSourceName="GetDataByDeleted">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at FROM staffs WHERE (deleted_at &lt;&gt; CONVERT (datetime, '9999-12-12', 102)) AND (deleted_at &lt;= GETDATE()) AND (is_active = 1)</CommandText>
@@ -549,7 +549,7 @@ SELECT id, ref, fullname, gender, department, position, pass_code, phone, email,
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmail" GetMethodModifier="Public" GetMethodName="GetDataByEmail" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmail" UserSourceName="GetDataByEmail">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmail" GetMethodModifier="Public" GetMethodName="GetDataByEmail" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmail" UserSourceName="GetDataByEmail">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, ref, fullname, gender, department, position, pass_code, phone, email, security_question, security_answer, image, is_active, deleted_at, created_at, updated_at
@@ -561,7 +561,7 @@ WHERE        (email = @email)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at FROM staffs WHERE (id = @id)</CommandText>
@@ -571,7 +571,7 @@ WHERE        (email = @email)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIsActive" GetMethodModifier="Public" GetMethodName="GetDataByIsActive" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIsActive" UserSourceName="GetDataByIsActive">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIsActive" GetMethodModifier="Public" GetMethodName="GetDataByIsActive" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIsActive" UserSourceName="GetDataByIsActive">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at FROM staffs WHERE (is_active = @is_active)</CommandText>
@@ -581,7 +581,7 @@ WHERE        (email = @email)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPhone" GetMethodModifier="Public" GetMethodName="GetDataByPhone" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPhone" UserSourceName="GetDataByPhone">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPhone" GetMethodModifier="Public" GetMethodName="GetDataByPhone" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPhone" UserSourceName="GetDataByPhone">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, ref, fullname, gender, department, position, pass_code, phone, email, security_question, security_answer, image, is_active, deleted_at, created_at, updated_at
@@ -593,7 +593,7 @@ WHERE        (phone = @phone)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPosition" GetMethodModifier="Public" GetMethodName="GetDataByPosition" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPosition" UserSourceName="GetDataByPosition">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPosition" GetMethodModifier="Public" GetMethodName="GetDataByPosition" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPosition" UserSourceName="GetDataByPosition">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at FROM staffs WHERE (position = @position)</CommandText>
@@ -603,7 +603,7 @@ WHERE        (phone = @phone)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPositionWithinYr" GetMethodModifier="Public" GetMethodName="GetDataByPositionWithinYr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPositionWithinYr" UserSourceName="GetDataByPositionWithinYr">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPositionWithinYr" GetMethodModifier="Public" GetMethodName="GetDataByPositionWithinYr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPositionWithinYr" UserSourceName="GetDataByPositionWithinYr">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at
@@ -615,7 +615,7 @@ WHERE        (YEAR(created_at) = YEAR(GETDATE())) AND (position = @position) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRef" GetMethodModifier="Public" GetMethodName="GetDataByRef" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRef" UserSourceName="GetDataByRef">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRef" GetMethodModifier="Public" GetMethodName="GetDataByRef" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRef" UserSourceName="GetDataByRef">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT created_at, deleted_at, department, email, fullname, gender, id, image, is_active, pass_code, phone, position, ref, security_answer, security_question, updated_at FROM staffs WHERE (ref = @ref)</CommandText>
@@ -625,7 +625,7 @@ WHERE        (YEAR(created_at) = YEAR(GETDATE())) AND (position = @position) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.staffs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, ref, fullname, gender, department, position, pass_code, phone, email, security_question, security_answer, image, is_active, deleted_at, created_at, updated_at
@@ -671,7 +671,7 @@ WHERE        (id = @Original_id);
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="key_staffTableAdapter" GeneratorDataComponentClassName="key_staffTableAdapter" Name="key_staff" UserDataComponentName="key_staffTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.key_staff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[key_staff] WHERE (([id] = @Original_id) AND ([staff_id] = @staff1.selected_staff_id) AND ([key_id] = @Original_key_id) AND ([is_fav] = @Original_is_fav) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)))</CommandText>
@@ -750,7 +750,7 @@ WHERE        (staff_id = @staff_id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKeyId" GetMethodModifier="Public" GetMethodName="GetDataByKeyId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKeyId" UserSourceName="GetDataByKeyId">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKeyId" GetMethodModifier="Public" GetMethodName="GetDataByKeyId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKeyId" UserSourceName="GetDataByKeyId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, staff_id, key_id, is_fav, created_at, updated_at
@@ -762,7 +762,7 @@ WHERE        (key_id = @key_id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffAndKeyId" GetMethodModifier="Public" GetMethodName="GetDataByStaffAndKeyId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffAndKeyId" UserSourceName="GetDataByStaffAndKeyId">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffAndKeyId" GetMethodModifier="Public" GetMethodName="GetDataByStaffAndKeyId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffAndKeyId" UserSourceName="GetDataByStaffAndKeyId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, staff_id, key_id, is_fav, created_at, updated_at
@@ -775,7 +775,7 @@ WHERE        (staff_id = @staff_id) AND (key_id = @key_id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="webtest.dbo.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffId" GetMethodModifier="Public" GetMethodName="GetDataByStaffId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffId" UserSourceName="GetDataByStaffId">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.key_staff" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffId" GetMethodModifier="Public" GetMethodName="GetDataByStaffId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffId" UserSourceName="GetDataByStaffId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, staff_id, key_id, is_fav, created_at, updated_at
@@ -996,7 +996,7 @@ WHERE        (id = @Original_id);
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="requestlogsTableAdapter" GeneratorDataComponentClassName="requestlogsTableAdapter" Name="requestlogs" UserDataComponentName="requestlogsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="GetData">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="GetData">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [requestlogs] WHERE (([id] = @Original_id) AND ([staff_ref] = @Original_staff_ref) AND ((@IsNull_username = 1 AND [username] IS NULL) OR ([username] = @Original_username)) AND ([action] = @Original_action) AND ([status] = @Original_status) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)))</CommandText>
@@ -1077,7 +1077,7 @@ SELECT id, staff_ref, username, keys, action, status, created_at, updated_at FRO
               <Mapping SourceColumn="username" DataSetColumn="username" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAction" GetMethodModifier="Public" GetMethodName="GetDataByAction" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAction" UserSourceName="GetDataByAction">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAction" GetMethodModifier="Public" GetMethodName="GetDataByAction" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAction" UserSourceName="GetDataByAction">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (action = @action)</CommandText>
@@ -1087,7 +1087,7 @@ SELECT id, staff_ref, username, keys, action, status, created_at, updated_at FRO
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="GetDataByDate">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="GetDataByDate">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (created_at &gt;= @created_at) AND (status &lt;&gt; 'pending')</CommandText>
@@ -1097,7 +1097,7 @@ SELECT id, staff_ref, username, keys, action, status, created_at, updated_at FRO
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDateAndSearch" GetMethodModifier="Public" GetMethodName="GetDataByDateAndSearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDateAndSearch" UserSourceName="GetDataByDateAndSearch">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDateAndSearch" GetMethodModifier="Public" GetMethodName="GetDataByDateAndSearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDateAndSearch" UserSourceName="GetDataByDateAndSearch">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, staff_ref, username, keys, action, status, created_at, updated_at
@@ -1111,7 +1111,7 @@ WHERE        (created_at &gt;= @created_at) AND (status &lt;&gt; 'pending') AND 
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="GetDataById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (id = @id)</CommandText>
@@ -1121,7 +1121,7 @@ WHERE        (created_at &gt;= @created_at) AND (status &lt;&gt; 'pending') AND 
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRequestComplete" GetMethodModifier="Public" GetMethodName="GetDataByRequestComplete" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRequestComplete" UserSourceName="GetDataByRequestComplete">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRequestComplete" GetMethodModifier="Public" GetMethodName="GetDataByRequestComplete" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRequestComplete" UserSourceName="GetDataByRequestComplete">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (status &lt;&gt; 'pending')</CommandText>
@@ -1129,7 +1129,7 @@ WHERE        (created_at &gt;= @created_at) AND (status &lt;&gt; 'pending') AND 
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="GetDataBySearch">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, staff_ref, username, keys, action, status, created_at, updated_at
@@ -1142,7 +1142,7 @@ WHERE        (status &lt;&gt; 'pending') AND ({ fn CONCAT(staff_ref, { fn CONCAT
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffId" GetMethodModifier="Public" GetMethodName="GetDataByStaffId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffId" UserSourceName="GetDataByStaffId">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStaffId" GetMethodModifier="Public" GetMethodName="GetDataByStaffId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStaffId" UserSourceName="GetDataByStaffId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (staff_id = @staff_id)</CommandText>
@@ -1152,7 +1152,7 @@ WHERE        (status &lt;&gt; 'pending') AND ({ fn CONCAT(staff_ref, { fn CONCAT
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStatus" GetMethodModifier="Public" GetMethodName="GetDataByStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStatus" UserSourceName="GetDataByStatus">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStatus" GetMethodModifier="Public" GetMethodName="GetDataByStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStatus" UserSourceName="GetDataByStatus">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (status = @status)</CommandText>
@@ -1162,7 +1162,7 @@ WHERE        (status &lt;&gt; 'pending') AND ({ fn CONCAT(staff_ref, { fn CONCAT
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.dbo.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="GetDataByUserId">
+              <DbSource ConnectionRef="SMSConnectionString (MySettings)" DbObjectName="smsdb.requestlogs" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="GetDataByUserId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT action, created_at, id, keys, staff_ref, status, updated_at, username FROM requestlogs WHERE (user_id = @user_id)</CommandText>

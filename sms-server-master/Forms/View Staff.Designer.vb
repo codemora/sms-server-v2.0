@@ -119,7 +119,8 @@ Partial Class View_Staff
         Me.lblActive.BackColor = System.Drawing.Color.Red
         Me.lblActive.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblActive.ForeColor = System.Drawing.Color.White
-        Me.lblActive.Location = New System.Drawing.Point(160, 136)
+        Me.lblActive.Location = New System.Drawing.Point(160, 133)
+        Me.lblActive.MaximumSize = New System.Drawing.Size(410, 28)
         Me.lblActive.Name = "lblActive"
         Me.lblActive.Size = New System.Drawing.Size(112, 21)
         Me.lblActive.TabIndex = 116
@@ -143,8 +144,8 @@ Partial Class View_Staff
         Me.lblContact.BackColor = System.Drawing.Color.Transparent
         Me.lblContact.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblContact.ForeColor = System.Drawing.Color.Silver
-        Me.lblContact.Location = New System.Drawing.Point(160, 110)
-        Me.lblContact.MaximumSize = New System.Drawing.Size(400, 21)
+        Me.lblContact.Location = New System.Drawing.Point(160, 107)
+        Me.lblContact.MaximumSize = New System.Drawing.Size(410, 28)
         Me.lblContact.Name = "lblContact"
         Me.lblContact.Size = New System.Drawing.Size(376, 21)
         Me.lblContact.TabIndex = 107
@@ -156,7 +157,8 @@ Partial Class View_Staff
         Me.lblGender.AutoSize = True
         Me.lblGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGender.ForeColor = System.Drawing.Color.Silver
-        Me.lblGender.Location = New System.Drawing.Point(160, 84)
+        Me.lblGender.Location = New System.Drawing.Point(160, 81)
+        Me.lblGender.MaximumSize = New System.Drawing.Size(410, 28)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(49, 21)
         Me.lblGender.TabIndex = 106
@@ -169,7 +171,8 @@ Partial Class View_Staff
         Me.lblRef.BackColor = System.Drawing.Color.Transparent
         Me.lblRef.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRef.ForeColor = System.Drawing.Color.Silver
-        Me.lblRef.Location = New System.Drawing.Point(160, 58)
+        Me.lblRef.Location = New System.Drawing.Point(160, 55)
+        Me.lblRef.MaximumSize = New System.Drawing.Size(410, 28)
         Me.lblRef.Name = "lblRef"
         Me.lblRef.Size = New System.Drawing.Size(59, 21)
         Me.lblRef.TabIndex = 104
@@ -181,12 +184,12 @@ Partial Class View_Staff
         Me.lblFullname.AutoEllipsis = True
         Me.lblFullname.AutoSize = True
         Me.lblFullname.BackColor = System.Drawing.Color.Transparent
-        Me.lblFullname.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFullname.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFullname.ForeColor = System.Drawing.Color.White
         Me.lblFullname.Location = New System.Drawing.Point(160, 25)
-        Me.lblFullname.MaximumSize = New System.Drawing.Size(400, 28)
+        Me.lblFullname.MaximumSize = New System.Drawing.Size(410, 28)
         Me.lblFullname.Name = "lblFullname"
-        Me.lblFullname.Size = New System.Drawing.Size(118, 28)
+        Me.lblFullname.Size = New System.Drawing.Size(105, 25)
         Me.lblFullname.TabIndex = 102
         Me.lblFullname.Text = "Fullname"
         Me.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
